@@ -277,7 +277,7 @@ $(document).ready(function(){
     $('#stab_statistic, #stab_photos').wrapAll('<div class="player-container"></div>')
   }
 
-  /** Hide player stat row if tournament name is empty. Player page */
+  /** Hide player stat row if tournament name is empty. On Player page */
   $('.player-oneline-stat tbody tr').each(function () {
     var emptyCell = $(this).find('td').first();
     if(emptyCell.is(':empty')){
