@@ -1,0 +1,52 @@
+body #sbox-window{
+    padding: 0;
+    @include tablet-p{
+        width: 320px !important;
+        left: 50% !important;
+        transform: translate(-50%, 0);
+        height: auto !important;
+            iframe{
+                width: 320px !important;
+                height: 520px !important;
+            }
+    }
+}
+.maincontent{
+    form{
+        h2{
+            @extend .article-heading;
+            border-bottom: 1px solid $color-3;
+            padding: 10px 0;
+        }
+        h4{
+            font-family: $font-heading;
+            color: $color-5;
+            font-size: 24px;
+            line-height: 36px;
+            text-align: center;
+        }
+        fieldset{
+            padding: 20px 0;
+                .uk-grid .uk-width-4-12:not(:first-child) .formControlLabel{
+                    text-align: right;
+                }
+                .uk-form-controls{
+                    margin-left: 0;
+                }
+                .uk-form-label{
+                    margin:10px 0;
+                    font-size: 16px;
+                    color: $color-2;
+                        .formRequired{
+                            color: #b71c1c;
+                        }
+                }
+                .rsform-block-submit{
+                    text-align: center;
+                    label{
+                        display: none;
+                    }
+                }
+        }
+    }
+}

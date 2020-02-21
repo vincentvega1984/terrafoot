@@ -1,0 +1,185 @@
+#jsMatchViewID{
+
+    .tabs #sticky-wrapper{
+        display: none;
+    }
+
+    .header-match-hidden{
+        display: none;
+    }
+
+    & > .heading{
+        display: flex;
+        justify-content: space-between;
+
+        .matchvenue{
+            @include tablet-p{
+                display: none !important;
+            }
+        }
+        @include tablet-p{
+            flex-direction: column;
+        };
+        .matchdtime,
+        .matchvenue{
+            display: flex;
+            align-items: center;
+            line-height: 36px;
+            font-size: 16px;
+            font-weight: 700;
+                a{
+                    text-decoration: none;
+                }
+        }
+    }
+
+    .jsmatchHeader {
+        .jstable-row{
+            .jstable-cell.left{
+                text-align: left;
+                padding-left: 0;
+            }
+            .jstable-cell.right{
+                text-align: right;
+                padding-right: 0;
+            }
+            .jstable-cell{
+                a{
+                    text-decoration: none;
+                    font-size: 24px;
+                    line-height: 36px;
+                    color: $color-6;
+                    font-family: $font-heading;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    #stab_main{
+        .table-responsive{
+            .additional-header{
+                display: none;
+            }
+            .jsTblMatchTab{
+                thead{
+                    display: none;
+                }
+                font-size: 16px;
+                    a{
+                        text-decoration: none;
+                    }
+                    td{
+                        vertical-align: middle;
+                    }
+                    tr{
+                        background: $color-7;
+                        color: $color-1;
+                            td{
+                                a{
+                                    color: $color-1;
+                                }
+                            }
+                            &:nth-child(2n){
+                                background: $color-8;
+                                color: $color-2;
+                                td{
+                                    a{
+                                        color: $color-2;
+                                    }
+                                }
+                            }
+                    }
+            }
+            .jsInline.right{
+                float: right;
+            }
+        }
+    }
+
+    #stab_about{
+        iframe{
+            margin: 20px auto;
+            display: block;
+            @include tablet-p{
+                width: 100%;
+            }
+        }
+    }
+
+    #stab_squad{
+        .center-block.jscenter h3{
+            font-size: 24px;
+            line-height: 36px;
+            color: $color-6;
+            font-family: $font-heading;
+            font-weight: 700;
+        }
+        .jstable{
+            .jstable-row{
+                display: flex;
+                border-right: 1px solid $color-1;
+                &:nth-child(2n){
+                    background: $color-grid-1;
+                    .jstable-cell a{
+                        color: $color-1;
+                    }
+                }
+                .jstable-cell{
+                    display: block;
+                    padding: 5px 10px;
+                        &.width5prc{
+                            width: 150px;
+                            display: none;
+                        }
+                        a{
+                            text-decoration: none;
+                            font-size: 16px;
+                            color: $color-2;
+                            line-height: 20px;
+                            font-family: $font-heading;
+                        }
+                }
+            }
+        }
+    }
+
+
+    .jsmatchHeader{
+        .jsMatchDivMain{
+            display: flex;
+            align-items: center;
+            background: $color-6;
+            padding: 10px 0;
+                & > div{
+                    flex-grow: 1;
+                    flex-basis: 0;
+                        .jsDivLineEmbl{
+                            text-align: center;
+                            display: block;
+                                .js_div_particName{
+                                    display: block;
+                                }
+                                a{
+                                    text-decoration: none;
+                                    color: $color-1;
+                                    font-size: 18px;
+                                    font-weight: 700;
+                                }
+                        }
+                }
+                .img-thumbnail{
+                    display: none;
+                }
+                .jsScoreDiv {
+                    a{
+                        text-decoration: none;
+                        color: $color-1;
+                        font-size: 24px;
+                    }
+                }
+        }
+
+    }
+
+}

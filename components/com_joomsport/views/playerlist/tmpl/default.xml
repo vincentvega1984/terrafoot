@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="BLBE_PLAYER_LIST">
+		<message>
+			<![CDATA[BLBE_PLAYER_LIST]]>
+		</message>
+	</layout>
+	<state>
+		<name>BLBE_PLAYER_LIST</name>
+		<description>BLBE_PLAYER_LIST</description>
+		<url addpath="/administrator/components/com_joomsport/elements">
+			<param name="sid" type="seasonall" default="0" label="BLBE_SELSEASN" required="true" description="BLBE_SEASON" />
+		</url>
+		<params>
+		</params>
+	</state>
+	<!-- 1.6 -->
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_joomsport/fields">
+
+                    <field name="sid" type="seasonall" default="0" required="true" label="BLBE_SELSEASN" description="BLBE_SEASON" />
+                    <field name="team_id" type="team" default="0" required="false" label="BLBE_SELTEAM" description="BLBE_TEAM" />
+                    <field name="playersort" type="playersort" default="0" required="false" label="BLBE_SORTBY" description="BLBE_SORTBY" />
+                    <field name="playerevents" type="playerevents" default="0" required="false" label="BLBE_DISPLAY_EVENTS" description="BLBE_DISPLAY_EVENTS" />
+		</fieldset>
+	</fields>
+</metadata>

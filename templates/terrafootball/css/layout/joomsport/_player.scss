@@ -1,0 +1,405 @@
+@charset "utf-8";
+
+.player-page .tab-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+        @include mobile-l{
+            flex-direction: column;
+        };
+        #stab_main{
+            width: 300px;
+            @include mobile-l{
+                width: 100%;
+            };
+        }
+        #stab_statistic{
+            width: 100%;
+        }
+        #stab_photos{
+            width: 100%;
+        }
+        .player-container{
+            width: calc(100% - 340px);
+            display: flex;
+            flex-direction: column;
+            @include mobile-l{
+                width: 100%;
+            };
+        }
+}
+
+.tabs.player-page #sticky-wrapper{
+    display: none;
+}
+
+.player-main-info{
+    .photoPlayer{
+        position: relative;
+        display: flex;
+        @include mobile-l{
+            float: none;
+            margin: 0 0 10px;
+        };
+        img.img-thumbnail.img-responsive{
+            max-width: 100% !important;
+            width: 100% !important;
+            border: 1px solid #ebebeb;
+        }
+        a{
+            display: block;
+            margin: 0 0 20px;
+                &.player-team{
+                    position: absolute;
+                    width: 100px;
+                    height: 100px;
+                    display: block;
+                    left: 0;
+                    bottom: 20px;
+                    margin: 0;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    background: $color-1;
+                    -webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.5);
+                    -moz-box-shadow:    4px 4px 5px 0px rgba(50, 50, 50, 0.5);
+                    box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.5);
+                        img{
+                            width: 60px;
+                            height: 60px;
+                            left: 50%;
+                            top: 50%;
+                            position: absolute;
+                            transform:translate(-50%,-50%);
+                            -webkit-transform:translate(-50%,-50%);
+                            -moz-transform:translate(-50%,-50%);
+                            -ms-transform:translate(-50%,-50%);
+                            -o-transform:translate(-50%,-50%);
+                        }
+                }
+        }
+    }
+    .short-bio{
+        display: none;
+    }
+    .description{
+        font-size: 15px;
+        line-height: 21px;
+    }
+    .extrafldcn div.jstable-row{
+        margin: 0 0 20px;
+    }
+}
+
+.maincontent #joomsport-container #stab_main .player-main-info .extrafldcn .jstable-row.polnoe_imya{
+    display: none;
+}
+
+.maincontent #joomsport-container #stab_main .player-main-info .extrafldcn .jstable-row{
+    display: flex;
+    flex-direction: column;
+    .jstable-cell:first-child{
+        background-color: $color-6;
+        padding: 15px !important;
+        color: $color-1;
+        font-family: $font-heading;
+        font-weight: 700;
+        display: block;
+        position: relative;
+    }
+    .jstable-cell:last-child{
+        padding: 15px;
+        border: 1px solid #ebebeb;
+        border-top: none;
+    }
+}
+
+.maincontent #joomsport-container #stab_main .player-main-info .extrafldcn .jstable-row.individualnye_nagrady .jstable-cell:last-child{
+    padding: 0;
+}
+
+.maincontent #joomsport-container #stab_main .player-main-info .extrafldcn .jstable-row .jstable-cell{
+    padding: 0;
+    font-size: 16px;
+}
+
+.maincontent #joomsport-container #stab_main .player-main-info .extrafldcn .jstable-row .jstable-cell li{
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.player-oneline-stat{
+    table.jsTableCareer{
+        border: 1px solid #f0f0f0;
+        font-family: $font;
+        margin: 0 0 15px;
+        font-size: 15px;
+
+            tbody{
+                @include mobile-l{
+                    tr{
+                        td{
+                            position: relative;
+                            padding-left: 50%;
+                            color: $color-6;
+                            font-size: 16px;
+                            font-weight: 700;
+                            &:before{
+                                display: flex;
+                                width: 50%;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                height: 46px;
+                                align-items: center;
+                                justify-content: center;
+                                background: $color-6;
+                                color: $color-1;
+                                font-size: 16px;
+                                font-weight: 700;
+                                font-family: $font-heading;
+                                border-bottom: 1px solid $color-1;
+                            }
+                            &:first-child{
+                                padding: 0;
+                                justify-content: center;
+                                text-align: center;
+                            }
+                            &:nth-child(2):before{
+                                content: 'Игры';
+                            }
+                            &:nth-child(3):before{
+                                content: 'Голы';
+                            }
+                            &:nth-child(4):before{
+                                content: 'Ассисты';
+                            }
+                            &:nth-child(5):before{
+                                content: 'КК';
+                            }
+                            &:nth-child(6):before{
+                                content: 'ЖК';
+                            }
+                            &:nth-child(7):before{
+                                content: 'Автоголы';
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include tablet-p{
+                display: none;
+            };
+
+            thead,
+            tbody{
+                @include mobile-l{
+                    flex: 0 0 100%;
+                    width: 100%;
+                }
+            }
+
+            thead{
+                @include mobile-l{
+                    display: none;
+                }
+            }
+
+            th{
+                padding: 5px 10px;
+                color: $color-1;
+                background: $color-6;
+                font-size: 15px;
+                line-height: 36px;
+                    @include mobile-l{
+                        text-align: left !important;
+                        font-size: 12px;
+                        &:not(:last-child){
+                            border-bottom: 1px solid #f0f0f0;
+                        }
+                    };
+            }
+            tr{
+                @include mobile-l{
+                    display: flex;
+                    flex-direction: column;
+                };
+                &:nth-child(2n){
+                    background: #f0f0f0;
+                }
+                td{
+                    padding: 5px 10px;
+                        @include mobile-l{
+                            height: 47px;
+                            align-items: center;
+                            display: flex;
+                            justify-content: center;
+                            font-size: 12px;
+                                &:not(:last-child){
+                                    border-bottom: 1px solid #f0f0f0;
+                                }
+                        };
+                        &:first-child{
+                            display: flex;
+                            align-items: center;
+                            width: 100% !important;
+                            line-height: 37px;
+                        }
+                        a{
+                            display: block;
+                            text-decoration: none;
+                            float: left;
+                                &:last-child{
+                                    line-height: 35px;
+                                }
+                        }
+                        img.img-thumbnail{
+                            min-width: 35px !important;
+                        }
+                }
+            }
+    }
+}
+
+.player-career{
+    font-size: 15px;
+    font-family: $font;
+    border: 1px solid #f0f0f0;
+    .jsMatchDivTime{
+        font-size: 12px;
+    }
+    a{
+        text-decoration: none;
+    }
+    img.img-thumbnail{
+        min-width: 35px !important;
+    }
+    .jstable-row{
+        @include mobile-l{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 0;
+            border: 1px solid #f0f0f0;
+        };
+    }
+}
+.player-career-seasons{
+    display: none;
+    @include tablet-p{
+        display: block;
+    };
+}
+.player-career-season__trigger{
+    background-color: $color-6;
+    color: $color-1;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: $font-heading;
+    padding: 15px 20px;
+    position: relative;
+    border-bottom: 1px solid $color-1;
+        &:after{
+            content:'+';
+            position: absolute;
+            right: 10px;
+            top: 7px;
+            line-height: 1;
+            font-size: 30px;
+            font-weight: 300;
+        }
+        &.open:after{
+            content:'-';
+        }
+}
+
+.player-career-season__collapsible{
+    display: none;
+}
+
+.player-career-season__value{
+    padding: 12px 20px 12px 50%;
+    color: $color-2;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+        a{
+            text-decoration: none;
+        }
+        img{
+            display: none !important;
+        }
+        &:first-child{
+            display: none;
+        }
+        &:before{
+            display: flex;
+            width: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            background: $color-8;
+            color: $color-5;
+            font-size: 14px;
+            font-weight: 700;
+            border-bottom: 1px solid $color-1;
+        }
+        &:nth-child(2):before{
+            content: 'Команда';
+        }
+        &:nth-child(3):before{
+            content: 'Игры';
+        }
+        &:nth-child(4):before{
+            content: 'Голы';
+        }
+        &:nth-child(5):before{
+            content: 'Ассисты';
+        }
+        &:nth-child(6):before{
+            content: 'КК';
+        }
+        &:nth-child(7):before{
+            content: 'ЖК';
+        }
+        &:nth-child(8):before{
+            content: 'Автоголы';
+        }
+}
+
+.player-career-season.minified{
+    .player-career-season__trigger{
+        display: none;
+    }
+    .player-career-season__collapsible{
+        display: block;
+    }
+    .player-career-season__value:nth-child(2):before{
+        content: 'Игры';
+    }
+    .player-career-season__value:nth-child(3):before{
+        content: 'Голы';
+    }
+    .player-career-season__value:nth-child(4):before{
+        content: 'Ассисты';
+    }
+    .player-career-season__value:nth-child(5):before{
+        content: 'КК';
+    }
+    .player-career-season__value:nth-child(6):before{
+        content: 'ЖК';
+    }
+    .player-career-season__value:nth-child(7):before{
+        content: 'Автоголы';
+    }
+}

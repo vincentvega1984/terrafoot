@@ -1,0 +1,111 @@
+#joomsport-container{
+    .calendar-table{
+        font-size: 15px;
+            div.jstable{
+                display: block;
+                width: 100%;
+            }
+            .js-mdname{
+                padding:15px 0;
+                background: $color-6 !important;
+                text-align: center;
+                font-family: $font-heading;
+                color: $color-1;
+                font-size: 16px;
+                font-weight: 700;
+                justify-content: center;
+                margin: 0 0 15px;
+            }
+            .jstable-row{
+                display: flex;
+                border-bottom: 1px solid $color-8;
+                    &:nth-child(2n){
+                        background: $color-1;
+                    }
+                    .jstable-cell{
+                        flex-grow: 1;
+                        flex-basis: 0;
+                        display: flex;
+                        text-align: center;
+                        padding: 0 10px;
+                        align-items: center;
+                        line-height: 40px;
+                            &.jsMatchDivHomeEmbl,
+                            &.jsMatchDivHome{
+                                justify-content: flex-end;
+                            }
+                            &.jsMatchDivHomeEmbl,
+                            &.jsMatchDivAwayEmbl{
+                                a{
+                                    display: block;
+                                    line-height: 0;
+                                }
+                            }
+                            &.jsMatchDivVenue{
+                                justify-content: flex-end;
+                                    a:after{
+                                        content:'';
+                                        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjE4LjQ1MyAyMTguNDUzIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyMTguNDUzIDIxOC40NTM7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgY2xhc3M9IiI+PGc+PGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMjE1LjA0LDQ0LjM3M0gzLjQxM0MxLjUyOSw0NC4zNzMsMCw0NS45MDMsMCw0Ny43ODd2MTIyLjg4YzAsMS44ODQsMS41MjksMy40MTMsMy40MTMsMy40MTNIMjE1LjA0ICAgIGMxLjg4NCwwLDMuNDEzLTEuNTI5LDMuNDEzLTMuNDEzVjQ3Ljc4N0MyMTguNDUzLDQ1LjkwMywyMTYuOTI0LDQ0LjM3MywyMTUuMDQsNDQuMzczeiBNMjExLjYyNywxNjcuMjUzSDYuODI3VjUxLjJoMjA0LjggICAgVjE2Ny4yNTN6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiMyQkE3NUUiIGRhdGEtb2xkX2NvbG9yPSIjMTlCRDVEIj48L3BhdGg+Cgk8L2c+CjwvZz48Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0xMDkuMjI3LDQ0LjM3M2MtMS44ODQsMC0zLjQxMywxLjUyOS0zLjQxMywzLjQxM3YxMjIuODhjMCwxLjg4NCwxLjUyOSwzLjQxMywzLjQxMywzLjQxM3MzLjQxMy0xLjUyOSwzLjQxMy0zLjQxMyAgICBWNDcuNzg3QzExMi42NCw0NS45MDMsMTExLjExMSw0NC4zNzMsMTA5LjIyNyw0NC4zNzN6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiMyQkE3NUUiIGRhdGEtb2xkX2NvbG9yPSIjMTlCRDVEIj48L3BhdGg+Cgk8L2c+CjwvZz48Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0xMDkuMjI3LDc4LjUwN2MtMTYuOTM5LDAtMzAuNzIsMTMuNzgxLTMwLjcyLDMwLjcyczEzLjc4MSwzMC43MiwzMC43MiwzMC43MnMzMC43Mi0xMy43ODEsMzAuNzItMzAuNzIgICAgUzEyNi4xNjUsNzguNTA3LDEwOS4yMjcsNzguNTA3eiBNMTA5LjIyNywxMzMuMTJjLTEzLjE3NSwwLTIzLjg5My0xMC43MTgtMjMuODkzLTIzLjg5M3MxMC43MTgtMjMuODkzLDIzLjg5My0yMy44OTMgICAgczIzLjg5MywxMC43MTgsMjMuODkzLDIzLjg5M1MxMjIuNDAyLDEzMy4xMiwxMDkuMjI3LDEzMy4xMnoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6IzJCQTc1RSIgZGF0YS1vbGRfY29sb3I9IiMxOUJENUQiPjwvcGF0aD4KCTwvZz4KPC9nPjxnPgoJPGc+CgkJPHBhdGggZD0iTTMwLjcyLDc1LjA5M0gzLjQxM0MxLjUyOSw3NS4wOTMsMCw3Ni42MjIsMCw3OC41MDd2NjEuNDRjMCwxLjg4NCwxLjUyOSwzLjQxMywzLjQxMywzLjQxM0gzMC43MiAgICBjMS44ODQsMCwzLjQxMy0xLjUyOSwzLjQxMy0zLjQxM3YtNjEuNDRDMzQuMTMzLDc2LjYyMiwzMi42MDQsNzUuMDkzLDMwLjcyLDc1LjA5M3ogTTI3LjMwNywxMzYuNTMzSDYuODI3VjgxLjkyaDIwLjQ4VjEzNi41MzN6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiMyQkE3NUUiIGRhdGEtb2xkX2NvbG9yPSIjMTlCRDVEIj48L3BhdGg+Cgk8L2c+CjwvZz48Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yMTUuMDQsNzUuMDkzaC0yNy4zMDdjLTEuODg0LDAtMy40MTMsMS41MjktMy40MTMsMy40MTN2NjEuNDRjMCwxLjg4NCwxLjUyOSwzLjQxMywzLjQxMywzLjQxM2gyNy4zMDcgICAgYzEuODg0LDAsMy40MTMtMS41MjksMy40MTMtMy40MTN2LTYxLjQ0QzIxOC40NTMsNzYuNjIyLDIxNi45MjQsNzUuMDkzLDIxNS4wNCw3NS4wOTN6IE0yMTEuNjI3LDEzNi41MzNoLTIwLjQ4VjgxLjkyaDIwLjQ4ICAgIFYxMzYuNTMzeiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojMkJBNzVFIiBkYXRhLW9sZF9jb2xvcj0iIzE5QkQ1RCI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=);
+                                        width: 30px;
+                                        height: 24px;
+                                        display: inline-block;
+                                        background-repeat: no-repeat;
+                                        background-size: 30px;
+                                        margin: 0 0 0 10px;
+                                        position: relative;
+                                        top: 4px;
+                                    }
+                            }
+                            &.jsMatchDivTime:before{
+                                content:'';
+                                width: 30px;
+                                height: 30px;
+                                display: inline-block;
+                                background-repeat: no-repeat;
+                                background-size: 30px;
+                                margin: 0 10px 0 0;
+                                background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzcyLjk2IDM3Mi45NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzcyLjk2IDM3Mi45NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiBjbGFzcz0iIj48Zz48Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0xODYuNDgsMEM4My40OSwwLDAsODMuNDksMCwxODYuNDhzODMuNDksMTg2LjQ4LDE4Ni40OCwxODYuNDhzMTg2LjQ4LTgzLjQ5LDE4Ni40OC0xODYuNDggICAgQzM3Mi44MjgsODMuNTQ1LDI4OS40MTUsMC4xMzIsMTg2LjQ4LDB6IE0xOTQuNDgsMzU2LjU2di0zMi44YzAtNC40MTgtMy41ODItOC04LThzLTgsMy41ODItOCw4djMyLjggICAgQzkwLjc1OSwzNTIuMzcyLDIwLjU4OCwyODIuMjAxLDE2LjQsMTk0LjQ4aDMyLjhjNC40MTgsMCw4LTMuNTgyLDgtOHMtMy41ODItOC04LThIMTYuNEMyMC41ODgsOTAuNzU5LDkwLjc1OSwyMC41ODgsMTc4LjQ4LDE2LjQgICAgdjMyLjhjMCw0LjQxOCwzLjU4Miw4LDgsOHM4LTMuNTgyLDgtOFYxNi40Yzg3LjcyMSw0LjE4OCwxNTcuODkyLDc0LjM1OSwxNjIuMDgsMTYyLjA4aC0zMi44Yy00LjQxOCwwLTgsMy41ODItOCw4czMuNTgyLDgsOCw4ICAgIGgwLjA4aDMyLjhDMzUyLjQ0OSwyODIuMjMsMjgyLjIzMiwzNTIuNDEyLDE5NC40OCwzNTYuNTZ6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiMzMzMzMzMiIGRhdGEtb2xkX2NvbG9yPSIjREREREREIj48L3BhdGg+Cgk8L2c+CjwvZz48Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yNzAuODgsMjYwLjg4bC03Ni40LTc3LjY4di04MC43MmMwLTQuNDE4LTMuNTgyLTgtOC04cy04LDMuNTgyLTgsOHY4NGMwLjAwOSwyLjA5OSwwLjg0Miw0LjExLDIuMzIsNS42bDc4LjY0LDgwICAgIGMzLjA5MywzLjE1OSw4LjE2MSwzLjIxMywxMS4zMiwwLjEyQzI3My45MTksMjY5LjEwNywyNzMuOTczLDI2NC4wMzksMjcwLjg4LDI2MC44OHoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6IzMzMzMzMyIgZGF0YS1vbGRfY29sb3I9IiNEREREREQiPjwvcGF0aD4KCTwvZz4KPC9nPjwvZz4gPC9zdmc+)
+                            }
+                            a{
+                                text-decoration: none;
+                            }
+                            img.img-thumbnail{
+                                min-width: 50px;
+                            }
+                    }
+            }
+
+            .jsMatchDivMainMobile .jsMatchDivScore .jsScoreDiv{
+                margin-top: 13px;
+            }
+
+            .jsMobileMatchCont{
+                padding: 0;
+                font-size: 15px;
+                margin: 0 0 15px;
+                    &:nth-of-type(2n){
+                        background: $color-1;
+                    }
+                    .date{
+                        color: $color-grid-3;
+                        font-weight: 700;
+                    }
+                    .jsDivMobileMdayName{
+                        background: $color-6;
+                        text-align: center;
+                        font-family: $font-heading;
+                        color: $color-1;
+                        padding: 10px 0;
+                    }
+                    .jsMatchDivVenue{
+                        padding: 10px 0;
+                    }
+                    a{
+                        text-decoration: none;
+                    }
+                    img.img-thumbnail{
+                        min-width: 50px;
+                    }
+            }
+    }
+}

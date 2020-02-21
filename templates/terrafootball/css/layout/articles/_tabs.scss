@@ -1,0 +1,58 @@
+.itemFullText{
+    .tabs-switcher{
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0 0;
+            .tabname{
+                padding: 10px;
+                font-family: $font-heading;
+                color: $color-5;
+                font-size: 18px;
+                width: 100%;
+                text-align: center;
+                background: $color-9;
+                @include transition(.3s);
+                cursor: pointer;
+                @include mobile-l{
+                    font-size: 15px;
+                }
+                    &.current{
+                        background: $color-6;
+                        color: $color-1;
+                            &:hover{
+                                background: $color-3;
+                            }
+                    }
+                    &:hover{
+                        background: $color-5;
+                        color: $color-1;
+                    }
+            }
+    }
+    .tabs{
+        border: 1px solid #ebebeb;
+        padding: 15px;
+            .tab-content{
+                display: none;
+                h2{
+                    text-align: center;
+                }
+                .formRequired{
+                    color: #b71c1c;
+                }
+                .formControlLabel{
+                    margin: 10px 0;
+                    font-size: 16px;
+                    color: $color-2;
+                }
+                &.current{
+                    display: block;
+                    width: 50%;
+                    margin: 0 auto;
+                    @include tablet-p{
+                        width: 100%;
+                    }
+                }
+            }
+    }
+}

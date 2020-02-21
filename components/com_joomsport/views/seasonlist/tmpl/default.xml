@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="BLBE_SEASONLIST_LAYOUT">
+		<message>
+			<![CDATA[BLBE_SEASONLIST_LAYOUT]]>
+		</message>
+	</layout>
+	<state>
+		<name>BLBE_SEASONLIST_LAYOUT</name>
+		<description>BLBE_SEASONLIST_LAYOUT</description>
+		<params>
+		</params>
+	</state>
+</metadata>

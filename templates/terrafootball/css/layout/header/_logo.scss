@@ -1,0 +1,129 @@
+.trigger-mobile{
+    display: none;
+    @include tablet-p{
+      display: block;
+      float: left;
+    };
+    .nav-mobile{
+      width:32px;
+      height:21px;
+      margin-top: 24px;
+      position: relative;
+      @include transition(.5s);
+      cursor: pointer;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+
+        span{
+          width:100%;
+          height:2px;
+          background: $color-1;
+          display: block;
+          position: absolute;
+          opacity: 1;
+          left: 0;
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+          @include transition(.25s);
+
+            &:nth-child(1) {
+              top: 0px;
+            }
+
+            &:nth-child(2) {
+              top: 10px;
+            }
+
+            &:nth-child(3) {
+              top: 21px;
+            }
+
+        }
+
+        &.open{
+          span{
+            &:nth-child(1) {
+              top: 10px;
+              -webkit-transform: rotate(135deg);
+              -moz-transform: rotate(135deg);
+              -o-transform: rotate(135deg);
+              transform: rotate(135deg);
+            }
+
+            &:nth-child(2) {
+              opacity:0;
+              left:-20px;
+            }
+
+            &:nth-child(3) {
+              top: 10px;
+              -webkit-transform: rotate(-135deg);
+              -moz-transform: rotate(-135deg);
+              -o-transform: rotate(-135deg);
+              transform: rotate(-135deg);
+            }
+          }
+        }
+
+    }
+}
+.logo{
+    @include tablet-p{
+        display: block;
+        float: left;
+        margin-left: 55px;
+    }
+}
+.logoimg{
+    background: url(../img/logo.svg) no-repeat;
+    background-size: contain;
+    display: block;
+    width:75px;
+    height: 75px;
+    margin: 10px 10px 10px 0;
+    @include tablet-p{
+      width: 50px;
+      height: 50px;
+      margin-left: -40px;
+    };
+}
+.logotext{
+    font-family: $font-heading;
+    font-size: 48px;
+    font-weight: 700;
+    color: $color-1;
+    display: block;
+    @include tablet-p{
+      display: none;
+    };
+}
+.logoslogan{
+    font-family: $font-heading;
+    font-size: 20px;
+    font-weight: 300;
+    color: $color-1;
+    display: block;
+    text-align: center;
+    @include tablet-p{
+      display: none;
+    };
+}
+.logo a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.moduletable-logo-sticky{
+    .logo-sticky{
+        background: url(../img/logo.svg) no-repeat;
+        background-size: contain;
+        display: block;
+        width:40px;
+        height: 40px;
+        margin: 0 10px 0 0;
+    }
+}

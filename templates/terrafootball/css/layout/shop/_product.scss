@@ -1,0 +1,130 @@
+.productInfo{
+    margin: 30px 0;
+    @include tablet-p{
+        margin: 15px 0;
+    }
+}
+
+.productImageBlock{
+    float: left;
+    width: 48.5%;
+    border: 1px solid #ebebeb;
+    @include tablet-p{
+        width: 100%;
+        float: none;
+    }
+    a{
+        display: block;
+        font-size: 0;
+    }
+    img{
+        width: 100%;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+            &.image-additional{
+                opacity: 0;
+                z-index: 1;
+            }
+    }
+}
+
+.productMainInfo{
+    float: right;
+    width: 48.5%;
+    @include tablet-p{
+        width: 100%;
+        float: none;
+    }
+}
+
+.productTitle{
+    @extend .article-heading;
+    margin: 0 0 30px;
+    @include tablet-p{
+        margin: 0 0 15px;
+        font-size: 20px;
+    }
+}
+
+.productExtraFields{
+    .productExtraFieldsLabel,
+    .aliasAdditionalImage{
+        display: none;
+    }
+
+    .aliasPrice{
+        color: $color-grid-3;
+        font-family: $font-heading;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 700;
+    }
+
+    .aliasDescription{
+        font-size: 16px;
+        line-height: 20px;
+        color: $color-5;
+            p{
+                margin: 0 0 10px;
+            }
+    }
+
+    .aliasStock .productExtraFieldsValue{
+        font-size: 14px;
+        color: $color-grid-1;
+        margin: 0 0 30px;
+        display: block;
+        font-weight: 700;
+        @include tablet-p{
+            margin: 0 0 15px;
+        }
+    }
+}
+
+.get-quote-wrapper{
+    @include tablet-p{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: $color-9;
+        padding: 20px 0;
+        text-align: center;
+        z-index: 9;
+    }
+}
+
+.get-quote{
+    background: $color-6;
+    color: $color-1;
+    font-family: $font-heading;
+    font-size: 18px;
+    line-height: 40px;
+    display: inline-block;
+    padding: 0 30px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 0 30px;
+    @include tablet-p{
+        margin: 0;
+    }
+}
+
+.product-item-view{
+    @include tablet-p{
+        padding: 0 0 80px;
+    }
+    #return-to-top{
+        @include tablet-p{
+            z-index: 10;
+        }  
+    }
+}

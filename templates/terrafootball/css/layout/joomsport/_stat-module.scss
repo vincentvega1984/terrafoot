@@ -1,0 +1,24 @@
+.jsm_playerstat{
+    padding: 0;
+        .item{
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+                .jsblc-team-embl{
+                    margin-right: 10px;
+                    img{
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+                }
+                .jsblc-team-info{
+                    strong{
+                        font-size: 20px;
+                        margin-right: 5px;
+                    }
+                    a{
+                        text-decoration: none;
+                    }
+                }
+        }
+}

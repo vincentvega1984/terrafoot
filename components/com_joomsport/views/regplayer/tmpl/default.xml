@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="BLBE_PLAYERREG_LAYOUT">
+		<message>
+			<![CDATA[BLBE_PLAYERREG_LAYOUT]]>
+		</message>
+	</layout>
+	<state>
+		<name>BLBE_PLAYERREG_LAYOUT</name>
+		<description>BLBE_PLAYERREG_LAYOUT</description>
+		<params>
+		</params>
+	</state>
+</metadata>

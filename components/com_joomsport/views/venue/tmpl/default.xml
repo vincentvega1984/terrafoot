@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="BLBE_VENUE_LAYOUT">
+		<message>
+			<![CDATA[BLBE_VENUE_LAYOUT]]>
+		</message>
+	</layout>
+	<state>
+		<name>BLBE_VENUE_LAYOUT</name>
+		<description>BLBE_VENUE_LAYOUT</description>
+		<url addpath="/administrator/components/com_joomsport/elements">
+			<param name="id" type="venue" default="0" label="BLBE_SELVENUE" description="BLBE_SELVENUE" />
+			
+		</url>
+		<params>
+		</params>
+	</state>
+	<!-- 1.6 -->
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_joomsport/fields">
+
+			<field name="id" type="venue" default="0" required="true" label="BLBE_SELVENUE" description="BLBE_SELVENUE" />
+		</fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,24 @@
+#return-to-top{
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: rgba(252,192,2,.85);
+    text-decoration: none;
+    text-align: center;
+        @include tablet-p{
+            right: 10px;
+            bottom: 10px;
+        }
+        &:before{
+            content:'\f106';
+            font-family: $icon-font;
+            color: $color-1;
+            font-size: 46px;
+        }
+        &:hover{
+            background: rgba(252,192,2,.65);
+        }
+}

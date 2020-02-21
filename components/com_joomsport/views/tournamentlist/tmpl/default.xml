@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="BLBE_MENTOURNLIST">
+		<message>
+			<![CDATA[BLBE_MENTOURNLIST]]>
+		</message>
+	</layout>
+	<state>
+		<name>BLBE_MENTOURNLIST</name>
+		<description>BLBE_MENTOURNLIST</description>		
+	</state>
+	
+</metadata>

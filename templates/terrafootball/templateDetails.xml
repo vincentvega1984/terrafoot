@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+	<name>Terrafootball</name>
+	<creationDate>03.11.2018</creationDate>
+	<author>Nikita Korotkiy</author>
+	<authorEmail>n.korotkiy@hiwayarts.com</authorEmail>
+	<authorUrl>hiwayarts.com</authorUrl>
+	<copyright>Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0.0</version>
+	<description>Template for noncommercial organization - Terrafootball</description>
+
+	<files>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<positions>
+		<position>logo</position>
+		<position>topinfo</position>
+		<position>trigger-mobile</position>
+		<position>contacts</position>
+		<position>slider</position>
+		<position>slider-bottom</position>
+		<position>mainmenu</position>
+		<position>breadcrumbs</position>
+		<position>top-1</position>
+		<position>top-2</position>
+		<position>top-3</position>
+		<position>top-4</position>
+		<position>bottom-1</position>
+		<position>bottom-2</position>
+		<position>bottom-3</position>
+		<position>footer-bottom</position>
+		<position>footer-middle</position>
+		<position>footer-top</position>
+	</positions>
+
+</extension>

@@ -1,0 +1,38 @@
+$susy: (
+  columns: 12,
+  container:1200px
+);
+
+body{
+    font-family: $font;
+    .container{
+        @include container;
+        padding:0 15px;
+        @include mobile-l{
+            padding: 0 10px;
+        };
+    }
+    a{
+        @include transition(.3s);
+    }
+}
+
+.absolute-center{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+}
+
+.mobile{
+  display: none;
+  @include tablet-p{
+    display: block;
+  }
+}
+
+.desktop{
+  @include tablet-p{
+    display: none;
+  }
+}

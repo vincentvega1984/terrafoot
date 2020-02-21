@@ -1,0 +1,123 @@
+#jsMatchViewID{
+    #jsTimeLineDiv{
+        height: 5px;
+        background: $color-grid-1;
+    }
+
+    .timline-wrapper{
+        @include tablet-p{
+            display: none;
+        };
+    }
+
+    h2.jsInlineBlock,
+    .center-block.jscenter h2{
+        font-family: $font-heading;
+        color: $color-6;
+        font-weight: 700;
+        font-size: 24px;
+        margin: 40px 0 20px;
+        @include tablet-p{
+            margin: 0 0 20px 0;
+        };
+    }
+
+    .timeline-block.additional-heading{
+        display: none;
+    }
+}
+
+.maincontent #joomsport-container #jsMatchViewID #stab_main table.table.table-striped{
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.maincontent #joomsport-container #jsMatchViewID #stab_main table.table.table-striped tbody{
+    border: none;
+        tr{
+            background:rgba(204,204,204,1);
+            background:-moz-linear-gradient(left,rgba(255,255,255,.1) 0%,rgba(204,204,204,1) 50%,rgba(255,255,255,.1) 100%);
+            background:-webkit-gradient(left top,right top,color-stop(0%,rgba(255,255,255,.1)),color-stop(50%,rgba(204,204,204,1)),color-stop(100%,rgba(255,255,255,.1)));
+            background:-webkit-linear-gradient(left,rgba(255,255,255,.1) 0%,rgba(204,204,204,1) 50%,rgba(255,255,255,.1) 100%);
+            background:-o-linear-gradient(left,rgba(255,255,255,.1) 0%,rgba(204,204,204,1) 50%,rgba(255,255,255,.1) 100%);
+            background:-ms-linear-gradient(left,rgba(255,255,255,.1) 0%,rgba(204,204,204,1) 50%,rgba(255,255,255,.1) 100%);
+            background:linear-gradient(to right,rgba(255,255,255,.1) 0%,rgba(204,204,204,1) 50%,rgba(255,255,255,.1) 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#ffffff',GradientType=1);
+                td{
+                    line-height: 1;
+                    padding: 5px;
+                    a{
+                        text-decoration: none;
+                        font-size: 16px;
+                        font-family: $font-heading;
+                        color: $color-5;
+                        @include tablet-p{
+                            font-size: 12px;
+                        };
+                    }
+                    &:nth-child(3){
+                        width: 6%;
+                        background: $color-7;
+                        color: $color-1;
+                        border: none;
+                        position: relative;
+                            @include tablet-p{
+                                font-size: 12px;
+                            };
+                            &:after{
+                                content: '';
+                                position: absolute;
+                                bottom: -10px;
+                                height: 10px;
+                                left: 50%;
+                                border-left: 2px solid $color-7;
+                            }
+                    }
+                    &.hidden{
+                        background: $color-1;
+                    }
+                    &.captain:before{
+                        content: 'c';
+                        font-family: $font-heading;
+                        color: $color-1;
+                        width: 20px;
+                        height: 20px;
+                        display: block;
+                        background-color: $color-6;
+                        text-align: center;
+                        line-height: 18px;
+                        position: absolute;
+                        right: -20px;
+                        top: 50%;
+                        transform: translate(0%, -50%);
+                        @include tablet-p{
+                            display: none;
+                        };
+                    }
+                }
+                &:last-child td:nth-child(3):after{
+                    display: none;
+                }
+        }
+}
+
+.matchExtraFields{
+    .JSplaceM{
+        display: flex;
+        padding: 0 0 10px;
+        align-items: center;
+        font-size: 18px;
+        font-family: $font-heading;
+            @include tablet-p{
+                font-size: 16px;
+                padding: 0 0 5px;
+            };
+            .valueEFM{
+                margin: 0 0 0 10px;
+                    a{
+                        text-decoration: none;
+                        color: $color-6;
+                    }
+            }
+    }
+}

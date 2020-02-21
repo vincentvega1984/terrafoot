@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="BLBE_TABLE_LAYOUT">
+		<message>
+			<![CDATA[BLBE_TABLE_LAYOUT]]>
+		</message>
+		
+	</layout>
+	
+	<state>
+		<name>BLBE_TABLE_LAYOUT</name>
+		<description>BLBE_TABLE_LAYOUT</description>
+		<url addpath="/administrator/components/com_joomsport/elements">
+			<param name="sid" type="season" default="0" label="BLBE_SELSEASN" description="BLBE_SELSEASN" />
+			<param name="gr_id" type="season" default="0" label="BLBE_SELGROUP" description="BLBE_SELGROUP" />
+		</url>
+		<params>
+		</params>
+	</state>
+	<!-- 1.6 -->
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_joomsport/fields">
+
+			<field name="sid" type="season" default="0" required="true" label="BLBE_SELSEASN" description="BLBE_SELSEASN" />
+			<field name="gr_id" type="season" default="0" label="BLBE_SELGROUP" description="BLBE_SELGROUP" />
+		</fieldset>
+	</fields>
+	
+</metadata>

@@ -1,0 +1,110 @@
+.scores-items{
+    display: flex;
+    width: 100%;
+    margin: 50px -10px;
+    @include tablet-p{
+        margin: 20px 0;
+    }
+        .slick-arrow{
+            font-size: 0;
+            padding: 0;
+            border: none;
+            background: transparent;
+            height: 36px;
+            width: 36px;
+            position: absolute;
+            top:50%;
+            transform: translate(0, -50%);
+            background-size: 36px;
+            cursor: pointer;
+                &.slick-prev{
+                    left:-60px;
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgY2xhc3M9IiI+PGc+PGc+CiAgICA8cGF0aCBkPSJtODguNiwxMjEuM2MwLjgsMC44IDEuOCwxLjIgMi45LDEuMnMyLjEtMC40IDIuOS0xLjJjMS42LTEuNiAxLjYtNC4yIDAtNS44bC01MS01MSA1MS01MWMxLjYtMS42IDEuNi00LjIgMC01LjhzLTQuMi0xLjYtNS44LDBsLTU0LDUzLjljLTEuNiwxLjYtMS42LDQuMiAwLDUuOGw1NCw1My45eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojMDQ4MkZBIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCI+PC9wYXRoPgogIDwvZz48L2c+IDwvc3ZnPg==);
+                    @include tablet-p{
+                        left: 0;
+                    }
+                }
+                &.slick-next{
+                    right:-60px;
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgY2xhc3M9IiI+PGcgdHJhbnNmb3JtPSJtYXRyaXgoLTEgMS4yMjQ2NWUtMTYgLTEuMjI0NjVlLTE2IC0xIDEyOSAxMjkpIj48Zz4KICAgIDxwYXRoIGQ9Im04OC42LDEyMS4zYzAuOCwwLjggMS44LDEuMiAyLjksMS4yczIuMS0wLjQgMi45LTEuMmMxLjYtMS42IDEuNi00LjIgMC01LjhsLTUxLTUxIDUxLTUxYzEuNi0xLjYgMS42LTQuMiAwLTUuOHMtNC4yLTEuNi01LjgsMGwtNTQsNTMuOWMtMS42LDEuNi0xLjYsNC4yIDAsNS44bDU0LDUzLjl6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiMwNDgyRkEiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+CiAgPC9nPjwvZz4gPC9zdmc+);
+                    @include tablet-p{
+                        right: 0;
+                    }
+                }
+        }
+        .item{
+            flex: 0 0 25%;
+            width: 25%;
+            padding: 10px;
+                .jsmatchdate{
+                    min-height: auto;
+                    color: $color-5;
+                    text-align: center;
+                    font-size: 12px;
+                    display: block;
+                    margin: 0 0 10px;
+                }
+                .item-wrapper{
+                    color: $color-5;
+                    position: relative;
+                    padding: 15px;
+                        &:before,
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            margin: 0 auto;
+                            width: 75%;
+                            height: 1px;
+                            background-image: linear-gradient(to left,rgba(255,22,255,0),$color-4 51%,rgba(255,22,255,0));
+                            z-index: 10;
+                        }
+                        &:before{
+                            top: 0;
+                        }
+                        &:after{
+                            bottom: 0;
+                        }
+                        .match-wrap{
+                            display: flex;
+                            width: 100%;
+                            justify-content: space-between;
+                                [class^="extra-time"]{
+                                    display: none;
+                                }
+                                .team{
+                                    text-align: center;
+                                    display: flex;
+                                    align-items: center;
+                                    flex: 0 0 42%;
+                                    width: 42%;
+                                        a{
+                                            color: $color-5;
+                                            text-decoration: none;
+                                            font-size: 14px;
+                                        }
+                                        &.home-team{
+                                            flex-direction: row-reverse;
+                                        }
+                                }
+                                .match-result{
+                                    flex: 0 0 16%;
+                                    width: 16%;
+                                    text-align: center;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                        a{
+                                            color: $color-6;
+                                            font-weight: 700;
+                                            text-decoration: none;
+                                        }
+                                }
+                                .team-logo{
+                                    margin: 0 5px;
+                                }
+                        }
+                }
+        }
+}

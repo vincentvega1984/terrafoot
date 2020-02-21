@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="BLBE_MENCLUBLIST">
+		<message>
+			<![CDATA[BLBE_MENCLUBLIST]]>
+		</message>
+	</layout>
+	<state>
+		<name>BLBE_MENCLUBLIST</name>
+		<description>BLBE_MENCLUBLIST</description>		
+	</state>
+	
+</metadata>

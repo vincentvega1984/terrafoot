@@ -1,0 +1,49 @@
+header{
+    background:$color-3;
+    @include tablet-p{
+        padding-top: 70px;
+    }
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include tablet-p{
+        display: block;
+    }
+        .contacts{
+            padding: 15px 0 0;
+            @include tablet-p{
+                padding: 10px 0 0;
+                display: inline-block;
+                float: right;
+            };
+            a{
+                display: block;
+                text-decoration: none;
+                color:$color-1;
+                font-family: $font-heading;
+                font-size: 24px;
+                line-height: 36px;
+                font-weight: 700;
+                text-align: right;
+                @include tablet-p{
+                    font-size: 18px;
+                    line-height: 24px;
+                };
+                &.mail{
+                    font-weight: 400;
+                }
+            }
+        }
+}
+.topbar{
+    @include tablet-p{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+        background: $color-3;
+    }
+}

@@ -1,0 +1,103 @@
+.top-1{
+    background: $color-1;
+    @include clearfix;
+    padding: 50px 0;
+    @include tablet-p{
+        padding: 20px 0;
+    }
+        h3{
+            @extend .mainpage-h3-heading;
+        }
+}
+
+.standings-table{
+    @include clearfix;
+    margin-top: 50px;
+    table{
+        width:100%;
+        max-width: 100%;
+            th{
+                text-align: left;
+                color: $color-7;
+                border-bottom: 2px solid $color-8;
+                font-size: 12px;
+                font-weight: 700;
+                padding: 8px;
+                &.jsalcenter{
+                    text-align: center;
+                }
+            }
+            td{
+                height: 50px;
+                border-top: 1px solid $color-8;
+                padding: 8px;
+                color: $color-5;
+                vertical-align: middle;
+                font-size: 14px;
+                    a{
+                        display: inline-block;
+                        text-decoration: none;
+                        color: $color-5;
+                        white-space: nowrap;
+                    }
+                    .team{
+                        display: flex;
+                        align-items: center;
+                            a:first-child{
+                                margin-right: 10px;
+                            }
+                    }
+                    &.jsalcenter{
+                        text-align: center;
+                    }
+            }
+    }
+}
+.more-info{
+    text-align: center;
+    padding:15px 0;
+    a{
+        display: inline-block;
+        @extend .button-blue;
+    }
+}
+
+.moduletable-bombers{
+    float: left;
+    width: 50%;
+        @include tablet-p{
+            float: none;
+            width: 100%;
+        }
+        .jsm_playerstat .item{
+            background: $color-9;
+            padding: 5px  15px;
+                .jsblc-team-info a{
+                    color: $color-2;
+                    font-family: $font-heading;
+                }
+                &:nth-child(2n){
+                    background: $color-8;
+                }
+        }
+}
+
+.moduletable-assists{
+    float: right;
+    width: 50%;
+        @include tablet-p{
+            float: none;
+            width: 100%;
+        }
+        .jsm_playerstat .item{
+            background: $color-9;
+            padding: 5px  15px;
+                .jsblc-team-info a{
+                    color: $color-2;
+                    font-family: $font-heading;
+                }
+                &:nth-child(2n){
+                    background: $color-8;
+                }
+        }
+}

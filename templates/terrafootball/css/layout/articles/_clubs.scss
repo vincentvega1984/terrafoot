@@ -1,0 +1,23 @@
+.itemBody{
+    .clubs{
+        display: flex;
+        flex-wrap: wrap;
+            .club{
+                display: block;
+                width: 20%;
+                flex: 0 0 20%;
+                text-align: center;
+                padding: 15px;
+                    a{
+                        text-decoration: none;
+                            span{
+                                display: block;
+                                padding: 10px 0;
+                            }
+                            img{
+                                width: 100%;
+                            }
+                    }
+            }
+    }
+}

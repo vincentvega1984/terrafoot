@@ -1,0 +1,27 @@
+.button{
+    display: inline-block;
+    background-color: $color-4;
+    padding:10px 18px;
+    border-radius: 3px;
+    color:$color-2;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+        &:hover{
+            background: lighten($color-4, 20%);
+        }
+}
+
+.button-blue{
+    display: inline-block;
+    background: $color-6;
+    padding:10px 18px;
+    border-radius: 3px;
+    color:$color-1;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+        &:hover{
+            background: lighten($color-6, 20%);
+        }
+}

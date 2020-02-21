@@ -1,0 +1,42 @@
+.top-info{
+    background: $color-4;
+    text-align: center;
+    position: relative;
+    display: none;
+        .custom{
+            padding: 10px;
+            @include tablet-p{
+                padding: 5px 10px;
+            };
+        }
+
+        span{
+            display: block;
+            text-align: center;
+            font-family: $font-heading;
+            color: $color-2;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 700;
+            @include tablet-p{
+                font-size: 14px;
+                line-height: 16px;
+            };
+        }
+        .close{
+            display: block;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translate(0,-50%);
+            cursor: pointer;
+                &:before{
+                    content:'\f00d';
+                    font-family: $icon-font;
+                    color: $color-2;
+                    font-size: 24px;
+                }
+        }
+}

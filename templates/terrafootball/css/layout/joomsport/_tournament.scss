@@ -1,0 +1,56 @@
+#joomsport-container{
+    .seasonTable{
+        #stab_main{
+            thead{
+                th{
+                    text-align: center;
+                    color: $color-7;
+                    border-bottom: 2px solid $color-8;
+                    font-size: 12px;
+                    font-weight: 700;
+                    padding: 8px;
+                        a{
+                            text-decoration: none;
+                        }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        height: 50px;
+                        border-top: 1px solid $color-8;
+                        padding: 8px;
+                        color: $color-5;
+                        vertical-align: middle;
+                        font-size: 14px;
+                        a{
+                            display: inline-block;
+                            text-decoration: none;
+                            color: $color-5;
+                        }
+                        .img-thumbnail{
+                            margin-right: 0;
+                        }
+                        .js_div_particName{
+                            padding: 0 3px;
+                        }
+                        .team{
+                            display: flex;
+                            align-items: center;
+                                a:first-child{
+                                    margin-right: 10px;
+                                }
+                        }
+                    }
+                }
+            }
+
+            .drawBracketContainerBE{
+                .table tr td[data-level="0"] .ml9{
+                    margin-left: 0;
+                }
+            }
+
+        }
+    }
+}

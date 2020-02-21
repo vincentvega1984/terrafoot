@@ -1,0 +1,500 @@
+.maincontent{
+    #joomsport-container{
+        font-family: $font;
+        .history{
+            display: none;
+        }
+        .heading{
+            position: relative;
+            & > .heading{
+                h2{
+                    @extend .mainpage-h3-heading;
+                    border-bottom: 1px solid $color-8;
+                    text-align: left;
+                    padding: 0;
+                    margin: 0 0 15px;
+                    line-height: 66px;
+                        span{
+                            display: flex;
+                            align-items: center;
+                        }
+                }
+                .img-thumbnail{
+                    padding: 0;
+                    min-width: auto;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            & > .selection{
+                position: absolute;
+                right: 0;
+                top: 18px;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                font-family: $font-heading;
+                    @include mobile-l{
+                        position: static;
+                    }
+                    .tournament-selection{
+                        font-size: 14px;
+                        margin-right: 10px;
+                            @include mobile-l{
+                                display: none;
+                            }
+                    }
+                    form{
+                        @include mobile-l{
+                            width: 100%;
+                            margin-bottom: 10px;
+                                span.select2{
+                                    max-width: 100%;
+                                    width: 100% !important; 
+                                }
+                                .data{
+                                    margin-left: 0;
+                                }
+                        }
+                    }
+                    .select2-container--default .select2-selection--single .select2-selection__rendered{
+                        padding-top: 2px;
+                    }
+                    .select2-container--default .select2-selection--single .select2-selection__arrow{
+                        top: 3px;
+                    }
+                    .select2-container--default .select2-selection--single{
+                        padding: 0;
+                    }
+            }
+        }
+        .is-sticky .nav.nav-tabs{
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+            -moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+            box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+            z-index: 999 !important;
+        }
+        .nav.nav-tabs{
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid $color-8;
+            background: #ebebeb;
+                li{
+                    flex: 1;
+                    &:not(:last-child){
+                        border-right: 1px solid $color-8;
+                    }
+                    &.active{
+                        background: $color-1;
+                            a{
+                                font-weight: 700;
+                            }
+                    }
+                    a{
+                        text-align: center;
+                        font-size: 15px;
+                        line-height: 36px;
+                        color: $color-5;
+                        text-decoration: none;
+                        font-family: $font-heading;
+                    }
+                }
+        }
+        .intro-block{
+            .photoPlayer{
+                float: left;
+                margin: 0 10px 10px 0;
+                @include mobile-l{
+                    float: none;
+                    margin: 0 0 15px;
+                }
+                img{
+                    @include mobile-l{
+                        max-width: 100% !important;
+                    }
+                }
+            }
+            .info{
+                font-size: 15px;
+                line-height: 21px;
+            }
+        }
+        #stab_main,
+        #stab_matches,
+        #stab_players,
+        #stab_photos,
+        #stab_statistic,
+        #stab_overview{
+            @include clearfix;
+            padding: 20px 0;
+                span.title{
+                    font-size: 18px;
+                    text-align: center;
+                    line-height: 36px;
+                    font-family: $font-heading;
+                    color: $color-3;
+                    font-weight: 700;
+                    display: block;
+                    padding: 0 0 15px;
+                }
+        }
+
+        #stab_main{
+            .rmpadd p{
+                font-size: 15px;
+                line-height: 19px;
+            }
+            .extrafldcn{
+                @include clearfix;
+                float: none;
+                padding: 0 0 20px;
+                font-size: 15px;
+                    .jstable-row{
+                        display: flex;
+                            a{
+                                text-decoration: none;
+                            }
+                            .jstable-cell{
+                                padding:5px 5px 5px 0;
+                            }
+                    }
+            }
+            .rmpadd{
+                line-height: 19px;
+                font-size: 15px;
+            }
+
+            .table-responsive{
+                @include mobile-l{
+                    overflow-x: auto;
+                }
+            }
+
+            table.table.table-striped{
+                width: 100%;
+                    thead{
+                        tr{
+                            th{
+                                padding: 5px 10px;
+                                font-size: 15px;
+                                line-height: 36px;
+                                background: $color-6;
+                                color: $color-1;
+                                border: none;
+                                    a{
+                                        color: $color-1;
+                                        font-weight: 400;
+                                    }
+                            }
+                        }
+                    }
+                    tbody{
+                        border-right: 1px solid $color-8;
+                        border-left: 1px solid $color-8;
+                        border-bottom: 1px solid $color-8;
+                        tr{
+                            td{
+                                padding: 5px 10px;
+                                font-size: 15px;
+                                line-height: 36px;
+                                position: relative;
+                                    .team{
+                                        img{
+                                            min-width: 40px;
+                                            padding: 0;
+                                            margin: 0;
+                                        }
+                                        a{
+                                            line-height: 0;
+                                        }
+                                    }
+                            }
+                        }
+                    }
+            }
+
+        }
+
+        #stab_matches{
+            span.title{
+                color:$color-1;
+                background: $color-6;
+                padding: 6px 0;
+                margin: 0 0 10px;
+                @include mobile-l{
+                    margin: 0;
+                }
+            }
+
+            .jsMobileMatchCont{
+                padding: 10px 0;
+                border-bottom: 1px solid $color-8;
+                font-family: $font-heading;
+                    .matchDate{
+                        margin: 0 0 10px;
+                        font-size: 15px;
+                        font-weight: 700;
+                        color: #EA4335;
+                    }
+                    .js_div_particName{
+                        a{
+                            text-decoration: none;
+                            font-size: 15px;
+                            font-weight: 700;
+                            line-height: 30px;
+                        }
+                    }
+                    .jsMatchDivScore .jsScoreDiv {
+                        margin-top: 16px;
+                        font-size: 20px;
+                    }
+                    .img-thumbnail{
+                        padding: 0;
+                        min-width: 60px;
+                    }
+                    .jsMatchDivVenue{
+                        display: none;
+                    }
+                &:nth-of-type(2n){
+                    background: $color-1;
+                }
+            }
+
+            .jsMatchDivMain{
+                /*border: 1px solid #f0f0f0;*/
+                font-family: $font;
+                    a{
+                        text-decoration: none;
+                        font-size: 15px;
+                    }
+                    img.img-thumbnail{
+                        padding: 0;
+                        min-width: 50px;
+                    }
+                    .jsMatchDivTime{
+                        font-size: 15px;
+                    }
+                    .jstable-row.cup .jsMatchDivVenue{
+                        background: $color-4;
+                        &:before{
+                            content:'';
+                            background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQwNS4yMjgsMjAuNjA4Yy00LjgyNCwwLTkuNzkyLDAuNjI0LTE0Ljc1MiwxLjg0OGwzLjgxNiwxNS41MjhjMzAuMjQ4LTcuNDI0LDU2LjYyNCwxNS41OTIsNTYuNjI0LDQ0LjMyICAgIGMwLDY3LjI4OC03Ni42MjQsMTE2Ljg4LTEwOC41NjgsMTI2LjIxNmw0LjQ4OCwxNS4zNmM0MC41NzYtMTEuODY0LDEyMC4wODgtNjcuMjY0LDEyMC4wOTYtMTQxLjU3NiAgICBDNDY2LjkzMiw0OC4yOCw0MzkuMjUyLDIwLjYwOCw0MDUuMjI4LDIwLjYwOHoiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik02MS4wNiw4Mi4zMDRjMC0yOC43MjgsMjYuMzY4LTUxLjc3Niw1Ni42MjQtNDQuMzEybDMuODMyLTE1LjUzNmMtNDAuMDMyLTkuODQtNzYuNDQ4LDIxLjAwOC03Ni40NDgsNTkuODQ4ICAgIGMwLDc0LjMyLDc5LjUyLDEyOS43MiwxMjAuMDgsMTQxLjU3Nmw0LjQ4OC0xNS4zNkMxMzcuNjg0LDE5OS4xNzYsNjEuMDYsMTQ5LjU5Miw2MS4wNiw4Mi4zMDR6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMjgzLjc0LDI5Ny44aC01NS40ODhjLTQuNDE2LDAtOCwzLjU3Ni04LDh2MzAuMzZjMCwyLjQwOCwxLjA5Niw0LjcwNCwyLjk3Niw2LjIyNGMxLjQzMiwxLjE2LDMuMjA4LDEuNzc2LDUuMDI0LDEuNzc2ICAgIGMwLjU2LDAsMS4xMjgtMC4wNjQsMS42ODgtMC4xODRjMTYuNDgtMy41NiwzNS42NC0zLjU2LDUyLjExMiwwYzIuMzY4LDAuNDk2LDQuODMyLTAuMDgsNi43MTItMS41OTIgICAgYzEuODgtMS41MiwyLjk3Ni0zLjgsMi45NzYtNi4yMjRWMzA1LjhDMjkxLjc0LDMwMS4zNzYsMjg4LjE2NCwyOTcuOCwyODMuNzQsMjk3Ljh6IE0yNzUuNzQsMzI2LjYyNCAgICBjLTEyLjgxNi0xLjc2OC0yNi42NzItMS43NzYtMzkuNDg4LDAuMDA4VjMxMy44di0wLjAwOGgzOS40ODhWMzI2LjYyNHoiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0zNjMuOTcyLDQ2Ni40NDhIMTQ4LjAyYy00LjQxNiwwLTgsMy41NzYtOCw4VjUwNGMwLDQuNDI0LDMuNTg0LDgsOCw4aDIxNS45NTJjNC40MjQsMCw4LTMuNTc2LDgtOHYtMjkuNTUyICAgIEMzNzEuOTcyLDQ3MC4wMjQsMzY4LjM5Niw0NjYuNDQ4LDM2My45NzIsNDY2LjQ0OHogTTM1NS45NzIsNDk2SDE1Ni4wMnYtMTMuNTUyaDE5OS45NTJWNDk2eiIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTM1MC4xMjQsMzUzLjczNkgxNjEuODY4Yy00LjQxNiwwLTgsMy41NzYtOCw4djExMi43MTJjMCw0LjQyNCwzLjU4NCw4LDgsOGgxODguMjU2YzQuNDE2LDAsOC0zLjU4NCw4LThWMzYxLjczNiAgICBDMzU4LjEyNCwzNTcuMzEyLDM1NC41NDgsMzUzLjczNiwzNTAuMTI0LDM1My43MzZ6IE0zNDIuMTI0LDQ2Ni40NDhIMTY5Ljg2OHYtOTYuNzEyaDE3Mi4yNTZWNDY2LjQ0OHoiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0zMTguMTMyLDM4NS43MjhIMTkzLjg2OGMtNC40MTYsMC04LDMuNTc2LTgsOHY0OC43MTJjMCw0LjQyNCwzLjU4NCw4LDgsOGgxMjQuMjY0YzQuNDE2LDAsOC0zLjU4NCw4LTh2LTQ4LjcxMiAgICBDMzI2LjEzMiwzODkuMzA0LDMyMi41NTYsMzg1LjcyOCwzMTguMTMyLDM4NS43Mjh6IE0zMTAuMTMyLDQzNC40NEgyMDEuODY4di0zMi43MTJoMTA4LjI2NFY0MzQuNDR6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMzk2Ljk4OCw0LjAyNEMzOTQuNDI4LDEuNDMyLDM5MS4wMiwwLDM4Ny4zODgsMEgxMjQuNjEyYy0zLjYxNiwwLTcuMDI0LDEuNDI0LTkuNTg0LDRjLTIuNTYsMi41ODQtMy45Niw2LTMuOTQ0LDkuNjMyICAgIGMwLjA1Niw1LjQ0OCwwLjI3MiwxMC44MDgsMC41MiwxNi45MTJjMC4yLDQuOTI4LDAuNDgsOS44MDgsMC44MDgsMTQuNjY0YzMuOTkyLDU5LjI0OCwxNy4xOTIsMTEzLjM4NCwzOC4xODQsMTU2LjU2ICAgIGMzLjA4OCw2LjM1Miw2LjQyNCwxMi41NzYsOS45MDQsMTguNDhjMTYuMDMyLDI3LjIyNCwzNC4zOTIsNDYuNzUyLDU0LjU5Miw1OC4wNTZjMi4xMiwxLjE4NCw0LjY0LDEuMzM2LDYuODQ4LDAuNDU2ICAgIGMxLjg1NiwwLjA2NCwzLjk1MiwwLjA2NCw2LjMwNCwwLjA2NGg2MS45MzZjMC45MDQsMC4zMzYsMS44NTYsMC41MDQsMi44MDgsMC41MDRjMS4zNDQsMCwyLjY4OC0wLjMzNiwzLjkxMi0xLjAxNiAgICBjMjAuMTkyLTExLjI5NiwzOC41Ni0zMC44MzIsNTQuNTkyLTU4LjA1NmMzLjQ1Ni01Ljg5Niw2Ljc4NC0xMi4xMTIsOS44ODgtMTguNDcyYzIxLjAwOC00My4yLDM0LjIwOC05Ny4zNDQsMzguMTkyLTE1Ni41NjggICAgYzAuMzItNC44NTYsMC42LTkuNzIsMC44LTE0LjY4OGMwLjIzMi01LjU5MiwwLjQ1Ni0xMS4xOTIsMC41MTItMTYuODU2QzQwMC45MzIsMTAuMDQsMzk5LjU0OCw2LjYxNiwzOTYuOTg4LDQuMDI0eiAgICAgTTM4NC4zODgsMjkuODg4Yy0wLjIwOCw0Ljc5Mi0wLjQ2NCw5LjUyOC0wLjc4NCwxNC4yNDhjLTMuODQsNTcuMTkyLTE2LjUwNCwxMDkuMjgtMzYuNjE2LDE1MC42NCAgICBjLTIuOTEyLDUuOTg0LTYuMDQsMTEuODMyLTkuMjg4LDE3LjM2Yy0xMy42NDgsMjMuMTc2LTI5LjUwNCw0MC42MzItNDYuMDA4LDUwLjY4aC02My40NGMwLjAxNiwwLjAwOC01LjM3NiwwLTcuOTQ0LDAgICAgYy0xNi41MTItMTAuMDU2LTMyLjM2OC0yNy41MDQtNDYuMDA4LTUwLjY4OGMtMy4yNjQtNS41NDQtNi4zOTItMTEuMzc2LTkuMjk2LTE3LjM1MmMtMjAuMTA0LTQxLjM0NC0zMi43Ni05My40MzItMzYuNjE2LTE1MC42NCAgICBjLTAuMzEyLTQuNzEyLTAuNTg0LTkuNDU2LTAuODA4LTE0Ljk2OGMtMC4xNzYtNC4zNzYtMC4zNi04Ljc1Mi0wLjQ0LTEzLjE2OGgyNTcuNzA0ICAgIEMzODQuNzY0LDIwLjY2NCwzODQuNTcyLDI1LjI3MiwzODQuMzg4LDI5Ljg4OHoiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0zNTIuMTA4LDM0LjY0Yy0wLjEyOCwyLjUxMi0wLjI3Miw0Ljg4LTAuNDMyLDcuMjI0Yy0zLjMzNiw0OS41NjgtMTQuNjE2LDk2LjI4OC0zMS43NjgsMTMxLjU1MiAgICBjLTIuNCw0LjkyOC01LjAwOCw5LjgwOC03Ljc1MiwxNC40OGMtOS40OCwxNi4wOTYtMjAuMTA0LDI4LjU5Mi0zMC43MTIsMzYuMTQ0bDkuMjgsMTMuMDQgICAgYzEyLjQzMi04Ljg0OCwyNC42LTIzLjA0OCwzNS4yMjQtNDEuMDY0YzIuOTYtNS4wNDgsNS43NzYtMTAuMjk2LDguMzUyLTE1LjZjMTguMDI0LTM3LjA4LDI5Ljg2NC04NS45MDQsMzMuMzQ0LTEzNy40OTYgICAgYzAuMTYtMi40NCwwLjMwNC00Ljg2NCwwLjQ0OC03LjQ0OEwzNTIuMTA4LDM0LjY0eiIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTI4My43NCwyNjIuODI0aC01NS44NDhjLTEzLjQ2NCwwLTE0LjgsMjYuMTA0LTE0LjgsMjYuMzY4YzAsMC4yNDgsMS41NjgsMjQuNjE2LDE1LjE2LDI0LjYxNmg1NS44NTYgICAgYzEzLjIzMiwwLDE0LjgtMjQuMzY4LDE0LjgtMjQuNjE2QzI5OC45MDgsMjg4LjkyOCwyOTcuNTcyLDI2Mi44MjQsMjgzLjc0LDI2Mi44MjR6IE0yODAuODIsMjk3LjgwOGgtNDkuNjQ4ICAgIGMtMS4wNC0yLjYyNC0yLjA1Ni02Ljk4NC0yLjA4OC04LjYwOGMwLjAyNC0xLjk0NCwxLjE4NC03LjI4OCwyLjMyOC0xMC4zNzZoNDkuMTY4YzEuMTUyLDMuMDg4LDIuMzA0LDguNDMyLDIuMzI4LDEwLjM2ICAgIEMyODIuODg0LDI5MC44MjQsMjgxLjg2LDI5NS4xOTIsMjgwLjgyLDI5Ny44MDh6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMjg1LjQyOCwzMjguMzM2Yy0xOC42ODgtNC4wMjQtNDAuMTY4LTQuMDQtNTguODY0LDBjLTI2LjUwNCw1LjczNi00Mi4zMjgsMTguMjI0LTQyLjMyOCwzMy4zOTJjMCw0LjQyNCwzLjU4NCw4LDgsOCAgICBoMTI3LjUyYzQuNDE2LDAsOC0zLjU3Niw4LThDMzI3Ljc1NiwzNDYuNTUyLDMxMS45MzIsMzM0LjA3MiwyODUuNDI4LDMyOC4zMzZ6IE0yMDUuODg0LDM1My43MjggICAgYzQuOTQ0LTMuNzIsMTMuMDU2LTcuMzY4LDI0LjA1Ni05Ljc1MmMxNi40ODgtMy41NiwzNS42NDgtMy41Niw1Mi4xMDQsMGMxMS4wMDgsMi4zODQsMTkuMTIsNi4wMzIsMjQuMDY0LDkuNzUySDIwNS44ODR6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            display: block;
+                            width: 30px;
+                            margin: 0 auto;
+                            height: 30px;
+                        }
+                    }
+                    .jstable-row:not(.cup) .jsMatchDivVenue{
+                        background: $color-6;
+                        &:before{
+                            content:'';
+                            background-image: url(../img/logo.svg);
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            display: block;
+                            width: 30px;
+                            margin: 0 auto;
+                            height: 30px;
+                        }
+                        a{
+                            display: none;
+                        }
+                    }
+                    .jstable-row{
+                        border-bottom: 1px solid $color-8;
+                        &:nth-child(2n){
+                            background: $color-1;
+                        }
+                    }
+            }
+        }
+
+        #stab_players{
+            .players-wrapper{
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -9px;
+                    @include mobile-l{
+                        margin: 0 -4px;
+                    }
+                    .jsplayerCart-wrapper{
+                        width: 16.666%;
+                        padding: 10px;
+                        @include tablet-l{
+                            width: 186px;
+                        }
+                        @include mobile-l{
+                            width: 50%;
+                            padding: 5px;
+                        }
+                            .jsplayerCart{
+                                /*border: 1px solid $color-8;*/
+                                border-radius: 5px;
+                                -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.5);
+                                -moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.5);
+                                box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.5);
+                                    .imgPlayerCart{
+                                        width: 100%;
+                                        overflow: hidden;
+                                        position: relative;
+                                        border: 5px solid #fff;
+                                        border-radius: 5px;
+                                        &:after{
+                                            content: "";
+                                            display: block;
+                                            padding-bottom: 100%;
+                                        }
+                                        img{
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%,-50%);
+                                            width: 100%;
+                                        }
+                                        a{
+                                            display: block;
+                                            line-height: 0;
+                                        }
+                                    }
+                                    .namePlayerCart{
+                                        background: $color-6;
+                                        padding: 15px 5px;
+                                        text-align: center;
+                                        border-radius: 0 0 5px 5px;
+                                            div.js_div_particName{
+                                                padding: 0;
+                                                width: 100%;
+                                                display: block;
+                                            }
+                                            a{
+                                                text-decoration: none;
+                                                font-size: 14px;
+                                                color: $color-1;
+                                                font-family: $font-heading;
+                                            }
+                                    }
+                            }
+                    }
+            }
+
+            .table-responsive > form{
+                overflow-x: auto;
+            }
+
+            .table-responsive th img.img-responsive{
+                display: none;
+            }
+
+            #jstable_plz{
+                width: 100%;
+                font-family: $font;
+                min-width: 700px;
+                    th{
+                        padding: 5px 10px;
+                        font-size: 15px;
+                        line-height: 36px;
+                        background: $color-6;
+                        color: $color-1;
+                            a{
+                                color: $color-1;
+                            }
+                    }
+                    a{
+                        text-decoration: none;
+                        font-size: 15px;
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                padding: 5px 10px;
+                                font-size: 15px;
+                                line-height: 36px;
+                                position: relative;
+                                    .jsDivLineEmbl{
+                                        display: flex;
+                                        align-items: center;
+                                            img.img-thumbnail{
+                                                min-width: 50px;
+                                                padding: 0;
+                                            }
+                                            a{
+                                                line-height: 1;
+                                            }
+                                    }
+                                    .js_div_particName{
+                                        &.captain:before{
+                                            content:'c';
+                                            font-family: $font-heading;
+                                            color: $color-1;
+                                            width: 20px;
+                                            height: 20px;
+                                            display: block;
+                                            background-color: $color-6;
+                                            text-align: center;
+                                            line-height: 18px;
+                                            position: absolute;
+                                            right: 0;
+                                            top: 50%;
+                                            transform: translate(0%, -50%);
+                                        }
+                                        &.injury:before{
+                                            content:'';
+                                            width: 20px;
+                                            height: 20px;
+                                            display: block;
+                                            position: absolute;
+                                            right: 0;
+                                            top: 50%;
+                                            transform: translate(0%, -50%);
+                                            background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPHBvbHlnb24gc3R5bGU9ImZpbGw6I0VGNTk1OTsiIHBvaW50cz0iNTEyLDE1OS44NjkgMzUyLjEzMSwxNTkuODY5IDM1Mi4xMzEsMCAxNTkuODY5LDAgMTU5Ljg2OSwxNTkuODY5IDAsMTU5Ljg2OSAwLDM1Mi4xMzEgICAxNTkuODY5LDM1Mi4xMzEgMTU5Ljg2OSw1MTIgMzUyLjEzMSw1MTIgMzUyLjEzMSwzNTIuMTMxIDUxMiwzNTIuMTMxICIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+                                            background-size: contain;
+                                        }
+                                        &.captain.injury:before{
+                                            background-image: none;
+                                            content:'c';
+                                        }
+                                        &.captain.injury:after{
+                                            content:'';
+                                            background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPHBvbHlnb24gc3R5bGU9ImZpbGw6I0VGNTk1OTsiIHBvaW50cz0iNTEyLDE1OS44NjkgMzUyLjEzMSwxNTkuODY5IDM1Mi4xMzEsMCAxNTkuODY5LDAgMTU5Ljg2OSwxNTkuODY5IDAsMTU5Ljg2OSAwLDM1Mi4xMzEgICAxNTkuODY5LDM1Mi4xMzEgMTU5Ljg2OSw1MTIgMzUyLjEzMSw1MTIgMzUyLjEzMSwzNTIuMTMxIDUxMiwzNTIuMTMxICIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+                                            background-size: contain;
+                                            right: 30px;
+                                            width: 20px;
+                                            height: 20px;
+                                            display: block;
+                                            position: absolute;
+                                            top: 50%;
+                                            transform: translate(0%, -50%);
+                                        }
+                                    }
+                            }
+                            &:nth-child(even){
+                                background: #f0f0f0;
+                            }
+                        }
+                    }
+            }
+        }
+
+        #stab_overview{
+            .table-responsive{
+                margin: 0 -15px;
+                .overviewBlocks{
+                    width: 50%;
+                    float: left;
+                    padding: 15px;
+                    margin-bottom: 0;
+                        h3{
+                            font-family: $font-heading;
+                            font-size: 16px;
+                            line-height: 24px;
+                            padding: 0 0 10px;
+                        }
+                }
+            }
+        }
+
+    }
+}

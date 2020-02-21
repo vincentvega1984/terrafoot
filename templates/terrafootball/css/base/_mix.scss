@@ -1,0 +1,126 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($transition) {
+	-webkit-transition: all $transition ease-out;
+	-moz-transition: all $transition ease-out;
+	-ms-transition: all $transition ease-out;
+	-o-transition: all $transition ease-out;
+	transition: all $transition ease-out;
+}
+
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin fontFace($family,$src,$style: normal,$weight: normal) {
+	@font-face {
+		font-family: $family;
+		src: url('#{$src}.eot'); // IE9 compat
+		src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+			url('#{$src}.woff') format('woff'), // standards
+			url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+			url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+
+		font-style: $style;
+		font-weight: $weight;
+	}
+}
+
+// =============================================================================
+// Placeholder
+// =============================================================================
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin hover {
+  &:hover{
+    opacity:.8;
+  }
+}
+
+$x-desktop-width: 1600px;
+$desktop-width: 1400px;
+$laptop-width: 1200px;
+$tablet-landscape-width: 960px;
+$tablet-portrait-width: 768px;
+$mobile-landscape-width: 480px;
+$mobile-portrait-width: 320px;
+
+@mixin mobile-p {
+  @media only screen and (max-width: #{$mobile-portrait-width}) {
+    @content;
+  }
+}
+
+@mixin mobile-l {
+  @media only screen and (max-width: #{$mobile-landscape-width}) {
+    @content;
+  }
+}
+
+@mixin tablet-p {
+  @media only screen and (max-width: #{$tablet-portrait-width}) {
+    @content;
+  }
+}
+
+@mixin tablet-l {
+  @media only screen and (max-width: #{$tablet-landscape-width}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media only screen and (max-width: #{$laptop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin x-desktop {
+  @media only screen and (max-width: #{$x-desktop-width}) {
+    @content;
+  }
+}

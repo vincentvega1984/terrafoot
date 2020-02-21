@@ -1,0 +1,61 @@
+.moduletable{
+    .standings-table{
+        margin: 15px 0;
+            h2.groups{
+                font-size: 20px;
+                font-weight: 700;
+                font-family: $font-heading;
+                text-align: center;
+                margin: 20px 0;
+                color: $color-6;
+            }
+            .table-responsive{
+                overflow-x: auto;
+                background: $color-1;
+            }
+            table{
+                width: 100%;
+                thead{
+                    background: $color-6;
+                    th{
+                        padding: 5px 10px;
+                        color: $color-1;
+                        border: 0;
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 36px;
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            padding: 5px 10px;
+                            font-size: 15px;
+                            line-height: 36px;
+                                .team {
+                                    display: flex;
+                                    align-items: center;
+                                        a{
+                                            line-height: 0;
+                                            white-space: nowrap;
+                                                img{
+                                                    min-width: 40px;
+                                                    padding: 0;
+                                                    margin: 0;
+                                                }
+                                                &:first-child{
+                                                    margin-right: 10px;
+                                                }
+                                        }
+                                }
+                        }
+                    }
+                }
+            }
+
+            .more-info{
+                padding: 0;
+                margin: 20px 0 0;
+            }
+    }
+}

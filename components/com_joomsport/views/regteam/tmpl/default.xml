@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="BLBE_TEAMREG_LAYOUT">
+		<message>
+			<![CDATA[BLBE_TEAMREG_LAYOUT]]>
+		</message>
+	</layout>
+	<state>
+		<name>BLBE_TEAMREG_LAYOUT</name>
+		<description>BLBE_TEAMREG_LAYOUT</description>
+		<params>
+		</params>
+	</state>
+</metadata>

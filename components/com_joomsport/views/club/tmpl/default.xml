@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="BLBE_CLUB_LAYOUT">
+		<message>
+			<![CDATA[BLBE_CLUB_LAYOUT]]>
+		</message>
+	</layout>
+	<state>
+		<name>BLBE_CLUB_LAYOUT</name>
+		<description>BLBE_CLUB_LAYOUT</description>
+		<url addpath="/administrator/components/com_joomsport/elements">
+			<param name="id" type="club" default="0" label="BLBE_SELCLUB" description="BLBE_SELCLUB" />
+			
+		</url>
+		<params>
+		</params>
+	</state>
+	<!-- 1.6 -->
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_joomsport/fields">
+
+			<field name="id" type="club" default="0" required="true" label="BLBE_SELCLUB" description="BLBE_SELCLUB" />
+		</fieldset>
+	</fields>
+</metadata>

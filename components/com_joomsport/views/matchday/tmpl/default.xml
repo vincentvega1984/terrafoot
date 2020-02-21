@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="BLBE_MDAY_LAYOUT">
+		<message>
+			<![CDATA[BLBE_MDAY_LAYOUT]]>
+		</message>
+	</layout>
+	<state>
+		<name>BLBE_MDAY_LAYOUT</name>
+		<description>BLBE_MDAY_LAYOUT</description>
+		<url addpath="/administrator/components/com_joomsport/elements">
+			<param name="id" type="matchday" default="0" label="BLBE_SELMATCHDAY" description="BLBE_SELMATCHDAY" />
+		</url>
+		<params>
+		</params>
+	</state>
+	<!-- 1.6 -->
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_joomsport/fields">
+
+			<field name="id" type="matchday" default="0" required="true" label="BLBE_SELMATCHDAY" description="BLBE_SELMATCHDAY" />
+		</fieldset>
+	</fields>
+</metadata>

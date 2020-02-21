@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="BLBE_PERSON_LAYOUT">
+		<message>
+			<![CDATA[BLBE_PERSON_LAYOUT]]>
+		</message>
+	</layout>
+	<state>
+		<name>BLBE_PERSON_LAYOUT</name>
+		<description>BLBE_PERSON_LAYOUT</description>
+		<url addpath="/administrator/components/com_joomsport/elements">
+			<param name="id" type="person" default="0" label="BLBE_SELPLAYER" description="BLBE_SELPLAYER" />
+		</url>
+		<params>
+		</params>
+	</state>
+	<!-- 1.6 -->
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_joomsport/fields">
+			<field name="id" type="person" default="0" label="BLBE_SELPERSON" description="BLBE_SELPERSON" required="true" />
+		</fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,102 @@
+.pitch{
+    background: #447710;
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+        @include tablet-l{
+            width: 100%;
+            padding: 10px;
+        }
+        .pitch-wrapper{
+            border: 3px solid $color-1;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+
+            @include tablet-l{
+                border: 2px solid $color-1;
+            }
+
+                .gk-zone{
+                    width: 400px;
+                    height: 200px;
+                    border: 3px solid $color-1;
+                    border-bottom: 0;
+                    margin: 0 auto;
+                    position: relative;
+                        @include tablet-l{
+                            border-width: 2px;
+                            width: 80%;
+                            height: auto;
+                            padding: 15px 0;
+                        }
+                        .player{
+                            position: absolute;
+                            left: 50%;
+                            top: 30px;
+                            transform: translate(-50%, 0);
+                            @include tablet-l{
+                                position: static;
+                                transform: none;
+                                margin: 0 auto;
+                            }
+                        }
+                }
+
+                .defense{
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 20px 0;
+                }
+
+                .atack{
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 20px 0;
+                }
+
+                .center-pitch{
+                    width: 160px;
+                    height: 160px;
+                    border-radius: 50%;
+                    border: 3px solid $color-1;
+                    position: absolute;
+                    top: -80px;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    z-index: 1;
+                }
+
+                .player{
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    z-index: 2;
+                    @include tablet-l{
+                        max-width: 40%;
+                    }
+                        a{
+                            text-decoration: none;
+                            text-align: center;
+                            color: $color-1;
+                                span{
+                                    display: block;
+                                    font-family: $font-heading;
+                                    color: $color-1;
+                                        &.name{
+                                            font-weight: 700;
+                                        }
+                                }
+                                img{
+                                    border-radius: 50%;
+                                    border: 2px solid $color-1;
+                                    @include tablet-l{
+                                        border: 1px solid $color-1;
+                                        width: 50px;
+                                    }
+                                }
+                        }
+                }
+        }
+}

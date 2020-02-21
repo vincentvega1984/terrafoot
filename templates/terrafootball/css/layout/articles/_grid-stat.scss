@@ -1,0 +1,15 @@
+.itemFullText{
+    .flex-grid{
+        display: flex;
+        flex-wrap: wrap;
+        .flex-grid-item{
+            &.width50{
+                width: 50%;
+                margin: 0 0 15px;
+                    @include tablet-p{
+                        width: 100%;
+                    } 
+            }
+        }
+    }
+}

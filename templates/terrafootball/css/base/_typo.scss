@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&amp;subset=cyrillic');
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../css/fonts/fontawesome-webfont.eot');
+  src: url('../css/fonts/fontawesome-webfont.eot') format('embedded-opentype'),
+    url('../css/fonts/fontawesome-webfont.woff2') format('woff2'),
+    url('../css/fonts/fontawesome-webfont.woff') format('woff'),
+    url('../css/fonts/fontawesome-webfont.ttf') format('truetype'),
+    url('../css/fonts/fontawesome-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../css/fonts/icomoon.eot');
+  src: url('../css/fonts/icomoon.eot') format('embedded-opentype'),
+    url('../css/fonts/icomoon.woff') format('woff'),
+    url('../css/fonts/icomoon.ttf') format('truetype'),
+    url('../css/fonts/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../css/fonts/Gilroy-Light.eot');
+    src: local('../css/fonts/Gilroy Light'), local('Gilroy-Light'),
+        url('../css/fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+        url('../css/fonts/Gilroy-Light.woff') format('woff'),
+        url('../css/fonts/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../css/fonts/Gilroy-Regular.eot');
+    src: local('../css/fonts/Gilroy Regular'), local('Gilroy-Regular'),
+        url('../css/fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../css/fonts/Gilroy-Regular.woff') format('woff'),
+        url('../css/fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../css/fonts/Gilroy-Bold.eot');
+    src: local('../css/fonts/Gilroy Bold'), local('Gilroy-Bold'),
+        url('../css/fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../css/fonts/Gilroy-Bold.woff') format('woff'),
+        url('../css/fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+$font:'Source Sans Pro', sans-serif;
+$font-heading:'Gilroy';
+$icon-font: 'FontAwesome';
+$icon-font-second: 'icomoon';
+
+strong{
+	font-weight:700;
+}
+
+.paragraph{
+  font-size:15px;
+  font-weight:300;
+  line-height:22px;
+  font-family:$font;
+}
+
+.mainpage-h3-heading{
+    font-size: 24px;
+    text-align: center;
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $color-5;
+}
+
+.article-heading{
+    padding: 0;
+    font-family: $font-heading;
+    font-size: 24px;
+    line-height: 36px;
+    color: $color-3;
+    font-weight: 700;
+}
