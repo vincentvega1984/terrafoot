@@ -3230,8 +3230,8 @@ table.calendar-table {
   font-size: 16px; }
 
 .maincontent #joomsport-container #stab_main .player-main-info .extrafldcn .jstable-row .jstable-cell li {
-  font-size: 14px;
-  line-height: 18px; }
+  font-size: 16px;
+  line-height: 24px; }
 
 .player-oneline-stat table.jsTableCareer {
   border: 1px solid #f0f0f0;
@@ -4031,7 +4031,7 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
     padding: 15px;
     display: none;
     border-top: 0;
-    max-height: 175px;
+    max-height: 210px;
     overflow-x: auto; }
   .achivements li {
     padding: 6px 0;
