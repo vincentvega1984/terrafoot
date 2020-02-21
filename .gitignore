@@ -24,6 +24,8 @@
 /templates/**
 !/templates/terrafootball/
 
+/.vscode
+
 !/components/
 /components/**
 !/components/com_joomsport/
