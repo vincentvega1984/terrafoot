@@ -103,6 +103,7 @@ nav.mainmenu{
                     display: block;
                     padding: 6px 8px;
                     border-radius: 3px;
+                    font-size: 15px;
                     @include transition(.3s);
                         @include tablet-p{
                             padding: 15px 0;

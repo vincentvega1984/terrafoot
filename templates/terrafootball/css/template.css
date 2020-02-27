@@ -572,6 +572,7 @@ nav.mainmenu {
         display: block;
         padding: 6px 8px;
         border-radius: 3px;
+        font-size: 15px;
         -webkit-transition: all 0.3s ease-out;
         -moz-transition: all 0.3s ease-out;
         -ms-transition: all 0.3s ease-out;
@@ -4339,8 +4340,8 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
   align-items: center;
   text-decoration: none; }
   .terra-clubs__link img {
-    max-width: 200px;
-    max-height: 200px; }
+    max-width: 180px;
+    max-height: 180px; }
   .terra-clubs__link span {
     font-family: "Gilroy";
     font-size: 18px;
