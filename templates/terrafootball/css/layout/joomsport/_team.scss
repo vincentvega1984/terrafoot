@@ -1,0 +1,22 @@
+body.mainpage .maincontent{
+    background: rgba(0,0,0,.5);
+    #k2Container.itemView .itemHeader,
+    #k2Container .itemLinks{
+        border: none;
+    }
+}
+
+.terra-best-week{
+    display: flex;
+    justify-content: space-between;
+        .terra-best-week__player{
+            width: 25%;
+            padding: 0 20px;
+            img{
+                width: 100%;
+            }
+            .player-statistic{
+                width: 100%;
+            }
+        }
+}
