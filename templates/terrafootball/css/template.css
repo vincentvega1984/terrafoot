@@ -4338,15 +4338,15 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
 
 .terra-clubs {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin: 20px 0; }
   @media only screen and (max-width: 768px) {
     .terra-clubs {
       flex-wrap: wrap;
       margin: 0 0 10px; } }
 
 .terra-clubs__club {
-  width: 10%;
-  padding: 20px; }
+  width: 10%; }
   @media only screen and (max-width: 768px) {
     .terra-clubs__club {
       width: 20%;
@@ -4366,7 +4366,7 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
         max-height: 50px; } }
   .terra-clubs__link span {
     font-family: "Gilroy";
-    font-size: 14px;
+    font-size: 13px;
     line-height: 24px;
     font-weight: 700;
     display: block;
@@ -4374,6 +4374,43 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
     @media only screen and (max-width: 768px) {
       .terra-clubs__link span {
         display: none; } }
+
+.terra-clubs__table-legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin: 0 0 10px; }
+  .terra-clubs__table-legend-item .legend-color {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 20px 0 0;
+    background-color: #CCFFCC; }
+  .terra-clubs__table-legend-item:nth-child(3) .legend-color {
+    background-color: #FFFF99; }
+  .terra-clubs__table-legend-item:nth-child(4) .legend-color {
+    background-color: #FFCCCC; }
+  .terra-clubs__table-legend-item:first-child .legend-color {
+    background-color: #99CCFF; }
+
+.terra-clubs__standings tbody tr td:first-child {
+  background-color: #CCFFCC; }
+
+/*Colors*/
+.terra-clubs__standings tbody tr:first-child td:first-child,
+.terra-clubs__standings tbody tr:nth-child(2) td:first-child {
+  background-color: #99CCFF; }
+
+.terra-clubs__standings tbody tr:nth-child(8) td:first-child,
+.terra-clubs__standings.first-league tbody tr:nth-child(3) td:first-child {
+  background-color: #FFFF99; }
+
+.terra-clubs__standings tbody tr:nth-child(9) td:first-child,
+.terra-clubs__standings tbody tr:nth-child(10) td:first-child {
+  background-color: #FFCCCC; }
+
+.terra-clubs.small .terra-clubs__club {
+  width: 25%; }
 
 .terra-clubs__action-buttons {
   display: flex;
