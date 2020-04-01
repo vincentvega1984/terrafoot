@@ -285,6 +285,9 @@ $(document).ready(function(){
     }
   });
 
+  var ratingWidth = $('.jstable-row.reyting .jstable-cell:last-child').text();
+  $('.jstable-row.reyting .jstable-cell:last-child').append("<span class='stars-background'><span class='stars-background-active' style='width:" + ratingWidth + '%' + "'></span></span>");
+
   var playerTeamImg = $('#stab_statistic .player-career-seasons .player-career-season:last-child img').attr('src');
   var playerTeamUrl = $('#stab_statistic .player-career-seasons .player-career-season:last-child a').attr('href');
   $('.player-main-info .photoPlayer .player-team img').attr('src', playerTeamImg);
