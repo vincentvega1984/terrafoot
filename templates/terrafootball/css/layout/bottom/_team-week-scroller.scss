@@ -1,0 +1,23 @@
+.bottom-1{
+    padding: 50px 0;
+    background: rgba(0,0,0,.5);
+}
+.terra-best-players__league{
+    display: flex !important;
+    margin: 0 -10px;
+    @include tablet-p{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0;
+    }
+}
+.terra-best-players__player{
+    width: 20%;
+    padding: 0 10px;
+    @include tablet-p{
+        width: calc(100%/3);
+    }
+    img{
+        width: 100%;
+    }
+}

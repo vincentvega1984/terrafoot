@@ -20,8 +20,7 @@
 /*.yml
 /*.xml
 .htaccess
-!/templates/
-/templates/**
+/templates/*
 !/templates/terrafootball/
 
 /.vscode
@@ -31,3 +30,6 @@
 !/components/com_joomsport/
 
 robots.txt.dist
+
+# Exclude SASS cache files
+.sass-cache/
