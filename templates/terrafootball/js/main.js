@@ -285,6 +285,15 @@ $(document).ready(function(){
     }
   });
 
+  /*Team page additional classes*/
+  $('.team-view .extrafldcn .jstable-row').each(function(){
+    var efName = $(this).children(":first").text();
+    var efNameLatin = efName.replace(':', '');
+    var efNewLatin = urlRusLat(efNameLatin);
+    console.log(efNewLatin);
+    $(this).addClass(efNewLatin);
+  })
+
   var ratingWidth = $('.jstable-row.reyting .jstable-cell:last-child').text();
   $('.jstable-row.reyting .jstable-cell:last-child').append("<span class='stars-background'><span class='stars-background-active' style='width:" + ratingWidth + '%' + "'></span></span>");
 
