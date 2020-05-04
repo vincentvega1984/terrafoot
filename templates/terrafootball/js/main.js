@@ -294,6 +294,14 @@ $(document).ready(function(){
     $(this).addClass(efNewLatin);
   })
 
+  $("#rating-sortable").tablesorter();
+
+  /*Count achivements*/
+  $('.achivements-block ').each(function(){
+    var count = $(this).find('ul li').length;
+    $(this).find('.title').prepend('<span class="achivements-count">'+ count +'</span>');
+  })
+
   var ratingWidth = $('.jstable-row.reyting .jstable-cell:last-child').text();
   $('.jstable-row.reyting .jstable-cell:last-child').append("<span class='stars-background'><span class='stars-background-active' style='width:" + ratingWidth + '%' + "'></span></span>");
 

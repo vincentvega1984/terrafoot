@@ -4064,6 +4064,20 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
       -moz-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
       -o-transform: rotate(180deg); }
+  .achivements .achivements-count {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+    font-size: 12px;
+    background-color: #E94C39;
+    color: #ffffff;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: center;
+    right: 50px;
+    top: 14px; }
   .achivements ul {
     padding: 15px;
     display: none;
