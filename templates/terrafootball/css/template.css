@@ -325,6 +325,30 @@ body {
   .desktop {
     display: none; } }
 
+table.tablesorter .tablesorter-headerRow th {
+  cursor: pointer; }
+  table.tablesorter .tablesorter-headerRow th[aria-sort="none"] .tablesorter-header-inner .tablesorter-header-inner:after {
+    display: none; }
+  table.tablesorter .tablesorter-headerRow th[aria-sort="ascending"] .tablesorter-header-inner:after {
+    content: '\f0de';
+    font-family: "FontAwesome";
+    margin: 0 0 0 5px;
+    color: #ffffff; }
+  table.tablesorter .tablesorter-headerRow th[aria-sort="descending"] .tablesorter-header-inner:after {
+    content: '\f0dd';
+    font-family: "FontAwesome";
+    margin: 0 0 0 5px;
+    color: #ffffff; }
+  table.tablesorter .tablesorter-headerRow th[aria-sort="ascending"], table.tablesorter .tablesorter-headerRow th[aria-sort="descending"] {
+    background: #0482FA !important; }
+  table.tablesorter .tablesorter-headerRow th .tablesorter-header-inner {
+    position: relative; }
+    table.tablesorter .tablesorter-headerRow th .tablesorter-header-inner:after {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      line-height: 0; }
+
 header {
   background: #3269b2; }
   @media only screen and (max-width: 768px) {

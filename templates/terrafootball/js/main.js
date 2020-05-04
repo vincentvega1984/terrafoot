@@ -294,8 +294,6 @@ $(document).ready(function(){
     $(this).addClass(efNewLatin);
   })
 
-  $("#rating-sortable").tablesorter();
-
   /*Count achivements*/
   $('.achivements-block ').each(function(){
     var count = $(this).find('ul li').length;
@@ -485,8 +483,10 @@ $(document).ready(function(){
           $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top - 100 }, 500);
 });
 
-    /*Marking cup matches on team page*/
-    $("#stab_matches .table-responsive.global .jsMatchDivMain .jstable-row .jsMatchDivVenue:empty").parent().addClass('cup');
+/*Marking cup matches on team page*/
+$("#stab_matches .table-responsive.global .jsMatchDivMain .jstable-row .jsMatchDivVenue:empty").parent().addClass('cup');
+
+$("#rating-sortable").tablesorter();
 
 });
 })(jQuery);

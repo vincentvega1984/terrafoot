@@ -1,0 +1,38 @@
+table.tablesorter{
+    .tablesorter-headerRow{
+        th{
+            cursor: pointer;
+                &[aria-sort="none"]{
+                    .tablesorter-header-inner .tablesorter-header-inner:after{
+                        display: none;
+                    }
+                }
+                &[aria-sort="ascending"] .tablesorter-header-inner:after{
+                    content:'\f0de';
+                    font-family: $icon-font;
+                    margin: 0 0 0 5px;
+                    color: $color-1;
+                }
+                &[aria-sort="descending"] .tablesorter-header-inner:after{
+                    content:'\f0dd';
+                    font-family: $icon-font;
+                    margin: 0 0 0 5px;
+                    color: $color-1;
+                }
+                &[aria-sort="ascending"],
+                &[aria-sort="descending"]{
+                    background: $color-6 !important;
+                }
+                .tablesorter-header-inner{
+                    position: relative;
+                        &:after{
+                            position: absolute;
+                            right: 10px;
+                            top: 10px;
+                            line-height: 0;
+                        }
+                }
+        }
+    }
+
+}
