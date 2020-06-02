@@ -201,8 +201,9 @@
     #k2Container.itemView .itemBody .standings-table table.table th,
     #k2Container.itemView .itemBody .standings-table  table.table tr td{
         font-size: 12px;
+        min-width: auto;
     }
     #k2Container.itemView .itemBody .standings-table  table.table tr td a{
-        font-size: 12px;;
+        font-size: 12px;
     }
 };

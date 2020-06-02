@@ -1802,7 +1802,8 @@ This file describes styles for special terrafootball elements
         color: #0482FA; }
   #k2Container.itemView .itemBody table.table {
     width: 100%;
-    position: relative; }
+    position: relative;
+    margin: 0 0 20px; }
     #k2Container.itemView .itemBody table.table .stick {
       position: absolute; }
     #k2Container.itemView .itemBody table.table th {
@@ -1811,7 +1812,9 @@ This file describes styles for special terrafootball elements
       text-align: center;
       font-size: 16px;
       font-family: "Gilroy";
-      padding: 10px; }
+      padding: 10px;
+      border-top: 1px solid #ffffff;
+      min-width: 80px; }
       @media only screen and (max-width: 480px) {
         #k2Container.itemView .itemBody table.table th {
           font-size: 14px;
@@ -1820,7 +1823,8 @@ This file describes styles for special terrafootball elements
         border-right: 1px solid #ffffff; }
     #k2Container.itemView .itemBody table.table tr td {
       border: 1px solid #dddddd;
-      padding: 10px; }
+      padding: 10px;
+      vertical-align: middle; }
       @media only screen and (max-width: 480px) {
         #k2Container.itemView .itemBody table.table tr td {
           padding: 8px 5px;
@@ -1929,6 +1933,19 @@ This file describes styles for special terrafootball elements
         text-decoration: none;
         margin-left: 4px;
         margin-bottom: 4px; }
+
+#rating-sortable td a,
+#rating-sortable-international td a {
+  display: flex;
+  align-items: center; }
+  #rating-sortable td a img,
+  #rating-sortable-international td a img {
+    margin-right: 10px; }
+
+@media only screen and (max-width: 768px) {
+  .rating-table-wrapper {
+    width: 100%;
+    overflow-y: auto; } }
 
 .arrow {
   padding-left: 20px;
@@ -4592,7 +4609,8 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
 @media only screen and (max-width: 480px) {
   #k2Container.itemView .itemBody .standings-table table.table th,
   #k2Container.itemView .itemBody .standings-table table.table tr td {
-    font-size: 12px; }
+    font-size: 12px;
+    min-width: auto; }
 
   #k2Container.itemView .itemBody .standings-table table.table tr td a {
     font-size: 12px; } }

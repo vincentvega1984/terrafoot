@@ -486,7 +486,11 @@ $(document).ready(function(){
 /*Marking cup matches on team page*/
 $("#stab_matches .table-responsive.global .jsMatchDivMain .jstable-row .jsMatchDivVenue:empty").parent().addClass('cup');
 
+/**Init table sorter for clubs & players */
 $("#rating-sortable").tablesorter();
+
+/**Init table sorter for naibourghoods */
+$("#rating-sortable-international").tablesorter();
 
 });
 })(jQuery);

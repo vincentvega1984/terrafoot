@@ -57,6 +57,7 @@
              table.table{
                  width: 100%;
                  position: relative;
+                 margin: 0 0 20px;
                     .stick{
                         position: absolute;
                     }
@@ -67,6 +68,8 @@
                         font-size: 16px;
                         font-family: $font-heading;
                         padding: 10px;
+                        border-top: 1px solid $color-1;
+                        min-width: 80px;
                         @include mobile-l{
                             font-size: 14px;
                             vertical-align: middle;
@@ -81,6 +84,7 @@
                          td{
                             border: 1px solid $color-8;
                             padding: 10px;
+                            vertical-align: middle;
                             @include mobile-l{
                                 padding: 8px 5px;
                                 font-size: 14px;
@@ -223,6 +227,22 @@
         }
     }
 
+}
+
+#rating-sortable td a,
+#rating-sortable-international td a{
+    display: flex;
+    align-items: center;
+    img{
+        margin-right: 10px;
+    }
+}
+
+.rating-table-wrapper{
+    @include tablet-p{
+        width: 100%;
+        overflow-y: auto;
+    }
 }
 
 .arrow{
