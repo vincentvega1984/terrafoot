@@ -1,89 +1,85 @@
-<div class="jscaruselcont jsview1" id="jsScrollMatches<?php echo $module_id;?>">
+<div class="joomsport-matchday-view">
 
-            <ul style="margin: 0px; padding: 0px; position: relative; list-style: none; z-index: 1;">
+            <ul class="joomsport-matchday-view__list">
                 <?php
                 foreach ($list as $match) {
                     $partic_home = $match->getParticipantHome();
                     $partic_away = $match->getParticipantAway();
                     $match_date = classJsportDate::getDate($match->object->m_date, $match->object->m_time);
                    ?>
-                <li>
-                    <div class="jsmatchcont">
+                <li class="joomsport-matchday-view__item">
+                    <div class="joomsport-matchday-view__match"
+                    <?php if($match->object->m_played > 1 || $match->object->m_played == 0){ ?>
+                        <?php echo 'attr-played="await"' ?>
+                    <?php }else{ ?>
+                        <?php echo 'attr-played="finished"' ?>
+                    <?php } ?>
+                    >
                         <?php
                         if($params->get('seasonname_is')){
                             $seasObj =  new modelJsportSeason($match->season_id);
-                            echo '<div class="jsmatchseason">'.$seasObj->getName().'</div>';
+                            echo '<div class="joomsport-matchday-view__match-season">'.$seasObj->getName().'</div>';
                         }
                         ?>
-                        <div class="jsmatchdate">
-
-
-
+                        <div class="joomsport-matchday-view__match-date">
                             <?php echo $match_date;?>
                             <?php if($match->object->venue_id && $params->get('venue_is')){
                                 $venue_name = $match->getLocation(false);
                                 ?>
-                                <a href="<?php echo classJsportLink::venue($venue_name, $match->object->venue_id, true, $cItemId);?>" title="<?php echo $match->getLocation(false);?>"><img src="<?php echo JS_LIVE_ASSETS;?>/images/location.png" /></a>
+                                <a class="joomsport-matchday-view__match-venue" href="<?php echo classJsportLink::venue($venue_name, $match->object->venue_id, true, $cItemId);?>" title="<?php echo $match->getLocation(false);?>"><img src="<?php echo JS_LIVE_ASSETS;?>/images/location.png" /></a>
                             <?php } ?>
                         </div>
-                        <table>
-                            <tr>
-                                <td class="tdminembl">
+                        <div class="joomsport-matchday-view__match-teams">
+                            <div class="joomsport-matchday-view__team-home">
+                                <div class="joomsport-matchday-view__team-logo">
                                     <?php
                                     if($params->get('embl_is')){
                                         echo $partic_home->getEmblem(true, 0, 'emblInline', 0, $cItemId);
                                     }
                                     ?>
-                                </td>
-                                <td class="tdminwdt">
+                                </div>
+                                <div class="joomsport-matchday-view__team-name">
                                     <?php
                                     echo jsHelper::nameHTML($partic_home->getName(true, $cItemId));
                                     ?>
-                                </td>
+                                </div>
                                 <?php
                                 if($match->object->m_played > 1 || $match->object->m_played == 0){
                                 ?>
-                                <td width="30" rowspan="2" class="jsVerticlLn">
-
-                                    <?php
-                                    echo jsHelper::getScore($match,'','',$cItemId);
-                                    
-                                    ?>
-
-                                </td>
+                                <div class="joomsport-matchday-view__team-scores">
+                                    <?php echo jsHelper::getScore($match,'','',$cItemId); ?>
+                                </div>
                                 <?php
                                 }else{
                                     ?>
-                                <td width="30">
+                                <div class="joomsport-matchday-view__team-scores">
                                     <?php
                                     if($match->object->m_played){    
                                         echo '<div class="scoreScrMod">'.classJsportLink::match($match->object->score1, $match->object->id,false,'',$cItemId).'</div>';
                                     }
                                     ?>
-                                </td>
+                                </div>
                                     <?php
                                 }
                                 ?>
-                            </tr>
-                            <tr>
-                                <td>
+                            </div>
+                            <div class="joomsport-matchday-view__team-away">
+                                <div class="joomsport-matchday-view__team-logo">
                                     <?php
                                     if($params->get('embl_is')){
                                         echo $partic_away->getEmblem(true, 0, 'emblInline', 0,  $cItemId);
                                     }
                                     ?>
-                                </td>
-                                <td class="tdminwdt">
-                                    <?php
-                                    echo jsHelper::nameHTML($partic_away->getName(true, $cItemId));
-                                    ?>
-                                </td>
+                                </div>
+                                <div class="joomsport-matchday-view__team-name">
+                                    <?php echo jsHelper::nameHTML($partic_away->getName(true, $cItemId)); ?>
+                                </div>
                                 <?php
-                                if($match->object->m_played > 1  || $match->object->m_played == 0){
-                                    
-                                }else{
+                                    if($match->object->m_played > 1  || $match->object->m_played == 0){
+                                        
+                                    }else{
                                 ?>
-                                <td>
+                                <div class="joomsport-matchday-view__team-scores">
                                     <?php
                                     if($match->object->m_played > 1){
                                         echo jsHelper::getScore($match,'','',$cItemId);
@@ -91,12 +87,12 @@
                                         echo '<div class="scoreScrMod">'.classJsportLink::match($match->object->score2, $match->object->id,false,'',$cItemId).'</div>';
                                     }
                                     ?>
-                                </td>
+                                </div>
                                 <?php
                                 }
                                 ?>
-                            </tr>
-                        </table>
+                            </div>
+                        </div>
 
                     </div>
 
