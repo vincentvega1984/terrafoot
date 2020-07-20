@@ -92,6 +92,14 @@ defined('_JEXEC') or die;
 <?php endif; ?>
 <!--end of slider-bottom-->
 
+<?php if ($this->countModules( 'top-1' )) : ?>
+    <div class="top-1">
+        <div class="container">
+            <jdoc:include type="modules" name="top-1" style="xhtml" />
+        </div>
+    </div>
+<?php endif; ?>
+
 <?php if ($this->countModules( 'top-2' )) : ?>
     <div class="top-2" data-parallax="scroll" data-image-src="<?php echo $this->baseurl; ?>/images/parallax/parallax-1.jpg">
         <div class="container">
@@ -109,14 +117,6 @@ defined('_JEXEC') or die;
 <?php endif; ?>
 
 <!--top_block-->
-<?php if ($this->countModules( 'top-1' )) : ?>
-    <div class="top-1">
-        <div class="container">
-            <jdoc:include type="modules" name="top-1" style="xhtml" />
-        </div>
-    </div>
-<?php endif; ?>
-
 
 
 <?php if ($this->countModules( 'top-4' )) : ?>

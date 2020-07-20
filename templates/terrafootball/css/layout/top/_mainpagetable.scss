@@ -1,12 +1,32 @@
 .top-1{
-    background: $color-1;
-    @include clearfix;
+    background-image: url(../img/top1bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 50px 0;
+    position: relative;
+    @include clearfix;
+
     @include tablet-p{
         padding: 20px 0;
     }
         h3{
             @extend .mainpage-h3-heading;
+        }
+
+        .container{
+            position: relative;
+            z-index: 2;
+        }
+
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,.5);
+            z-index: 1;
         }
 }
 
