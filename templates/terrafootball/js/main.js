@@ -321,6 +321,48 @@ $(document).ready(function(){
       return $(this).text().replace("травма", "");
   });
 
+  /**Best players module */
+
+  $('.terra-best-players__player-rating').each(function () {
+    var bestRatingElement = $(this);
+    var ratingBestWidth = bestRatingElement.text();
+    bestRatingElement.append("<span class='stars-background'><span class='stars-background-active' style='width:" + ratingBestWidth + '%' + "'></span></span>");
+  });
+  
+
+  $('.terra-best-players').slick({
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    arrows: false,
+    dots: true,
+    responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 960,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }
+    ]
+  });
+
   $('.matches-scroller .scores-items').slick({
     infinite: true,
     slidesToShow: 4,

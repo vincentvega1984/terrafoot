@@ -1001,8 +1001,7 @@ nav.mainmenu {
       margin-top: 20px; }
 
 .slider-item {
-  position: relative;
-  min-height: 450px; }
+  position: relative; }
   .slider-item:before {
     content: '';
     background: rgba(0, 0, 0, 0.5);
@@ -1013,16 +1012,11 @@ nav.mainmenu {
     top: 0;
     z-index: 1; }
   .slider-item img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    min-height: 450px; }
+    width: 100%; }
     @media only screen and (max-width: 768px) {
       .slider-item img {
-        width: auto;
+        width: 100%;
+        position: static;
         min-height: auto; } }
 
 .slider .slick-arrow {
@@ -1463,8 +1457,11 @@ ul.breadcrumb li {
     line-height: 1; }
 
 .top-1 {
-  background: #ffffff;
-  padding: 50px 0; }
+  background-image: url(../img/top1bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+  position: relative; }
   .top-1:after {
     content: "";
     display: table;
@@ -1472,6 +1469,18 @@ ul.breadcrumb li {
   @media only screen and (max-width: 768px) {
     .top-1 {
       padding: 20px 0; } }
+  .top-1 .container {
+    position: relative;
+    z-index: 2; }
+  .top-1:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1; }
 
 .standings-table {
   margin-top: 50px; }
@@ -4320,6 +4329,147 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%); }
+
+.terra-best-players__player a {
+  display: block;
+  padding: 15px;
+  position: relative;
+  text-decoration: none; }
+.terra-best-players__player img {
+  width: 100%; }
+
+.terra-best-players {
+  margin: 0 -15px; }
+
+.terra-best-players__title {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Gilroy";
+  font-weight: 700;
+  font-size: 30px;
+  margin: 0 0 40px; }
+  @media only screen and (max-width: 768px) {
+    .terra-best-players__title {
+      font-size: 20px;
+      margin: 0 0 20px; } }
+
+.terra-best-players__team-logo {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  left: 10px;
+  bottom: 60px;
+  overflow: hidden;
+  display: block;
+  background: #ffffff;
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.5); }
+  .terra-best-players__team-logo img {
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%); }
+
+.terra-best-players__player-rating {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.5); }
+  .terra-best-players__player-rating .stars-background {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJjb2xvciIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSI1MTIiIGNsYXNzPSIiPjxnPjxwYXRoIGQ9Im0yMy4zNjMgOC41ODQtNy4zNzgtMS4xMjctMy4zMDctNy4wNDRjLS4yNDctLjUyNi0xLjExLS41MjYtMS4zNTcgMGwtMy4zMDYgNy4wNDQtNy4zNzggMS4xMjdjLS42MDYuMDkzLS44NDguODMtLjQyMyAxLjI2NWw1LjM2IDUuNDk0LTEuMjY3IDcuNzY3Yy0uMTAxLjYxNy41NTggMS4wOCAxLjEwMy43NzdsNi41OS0zLjY0MiA2LjU5IDMuNjQzYy41NC4zIDEuMjA1LS4xNTQgMS4xMDMtLjc3N2wtMS4yNjctNy43NjcgNS4zNi01LjQ5NGMuNDI1LS40MzYuMTgyLTEuMTczLS40MjMtMS4yNjZ6IiBmaWxsPSIjZmZjMTA3IiBkYXRhLW9yaWdpbmFsPSIjRkZDMTA3IiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGMEYwRjAiIGRhdGEtb2xkX2NvbG9yPSIjZmZjMTA3Ij48L3BhdGg+PC9nPiA8L3N2Zz4=);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%); }
+  .terra-best-players__player-rating .stars-background-active {
+    display: block;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJjb2xvciIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSI1MTIiIGNsYXNzPSIiPjxnPjxwYXRoIGQ9Im0yMy4zNjMgOC41ODQtNy4zNzgtMS4xMjctMy4zMDctNy4wNDRjLS4yNDctLjUyNi0xLjExLS41MjYtMS4zNTcgMGwtMy4zMDYgNy4wNDQtNy4zNzggMS4xMjdjLS42MDYuMDkzLS44NDguODMtLjQyMyAxLjI2NWw1LjM2IDUuNDk0LTEuMjY3IDcuNzY3Yy0uMTAxLjYxNy41NTggMS4wOCAxLjEwMy43NzdsNi41OS0zLjY0MiA2LjU5IDMuNjQzYy41NC4zIDEuMjA1LS4xNTQgMS4xMDMtLjc3N2wtMS4yNjctNy43NjcgNS4zNi01LjQ5NGMuNDI1LS40MzYuMTgyLTEuMTczLS40MjMtMS4yNjZ6IiBmaWxsPSIjZmZjMTA3IiBkYXRhLW9yaWdpbmFsPSIjRkZDMTA3IiBjbGFzcz0iYWN0aXZlLXBhdGgiPjwvcGF0aD48L2c+IDwvc3ZnPg==); }
+
+.terra-best-players__player-rating-value {
+  position: relative;
+  z-index: 3;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Gilroy";
+  color: #574A99;
+  top: 2px; }
+
+.terra-best-players__player-name {
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Gilroy";
+  display: block;
+  padding: 20px 0 10px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  @media only screen and (max-width: 768px) {
+    .terra-best-players__player-name {
+      font-size: 16px; } }
+
+.terra-best-players__player-league {
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "Gilroy";
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.terra-best-players .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .terra-best-players .slick-dots button {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    padding: 0; }
+  .terra-best-players .slick-dots li.slick-active button {
+    background-color: #61BFB8; }
 
 .shop-items-list {
   display: flex;

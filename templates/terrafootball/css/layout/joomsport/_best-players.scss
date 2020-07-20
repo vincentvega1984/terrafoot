@@ -1,0 +1,166 @@
+.terra-best-players__player{
+    a{
+        display: block;
+        padding: 15px;
+        position: relative;
+        text-decoration: none;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+.terra-best-players{
+    margin: 0 -15px;
+}
+
+.terra-best-players__title{
+    text-align: center;
+    color: $color-1;
+    font-family: $font-heading;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 0 0 40px;
+    @include tablet-p{
+        font-size: 20px;
+        margin: 0 0 20px;
+    }
+}
+
+.terra-best-players__team-logo{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    left: 10px;
+    bottom: 60px;
+    overflow: hidden;
+    display: block;
+    background: $color-1;
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.5);
+    box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.5);
+
+        img{
+            width: 40px;
+            height: 40px;
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+        }
+
+}
+
+.terra-best-players__player-rating{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-1;
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.5);
+    box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.5);
+    
+
+    .stars-background{
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJjb2xvciIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSI1MTIiIGNsYXNzPSIiPjxnPjxwYXRoIGQ9Im0yMy4zNjMgOC41ODQtNy4zNzgtMS4xMjctMy4zMDctNy4wNDRjLS4yNDctLjUyNi0xLjExLS41MjYtMS4zNTcgMGwtMy4zMDYgNy4wNDQtNy4zNzggMS4xMjdjLS42MDYuMDkzLS44NDguODMtLjQyMyAxLjI2NWw1LjM2IDUuNDk0LTEuMjY3IDcuNzY3Yy0uMTAxLjYxNy41NTggMS4wOCAxLjEwMy43NzdsNi41OS0zLjY0MiA2LjU5IDMuNjQzYy41NC4zIDEuMjA1LS4xNTQgMS4xMDMtLjc3N2wtMS4yNjctNy43NjcgNS4zNi01LjQ5NGMuNDI1LS40MzYuMTgyLTEuMTczLS40MjMtMS4yNjZ6IiBmaWxsPSIjZmZjMTA3IiBkYXRhLW9yaWdpbmFsPSIjRkZDMTA3IiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGMEYwRjAiIGRhdGEtb2xkX2NvbG9yPSIjZmZjMTA3Ij48L3BhdGg+PC9nPiA8L3N2Zz4=);
+        background-repeat: no-repeat;
+        background-size: 40px;
+        width: 40px;
+        height: 40px;
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+
+    .stars-background-active{
+        display: block;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJjb2xvciIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSI1MTIiIGNsYXNzPSIiPjxnPjxwYXRoIGQ9Im0yMy4zNjMgOC41ODQtNy4zNzgtMS4xMjctMy4zMDctNy4wNDRjLS4yNDctLjUyNi0xLjExLS41MjYtMS4zNTcgMGwtMy4zMDYgNy4wNDQtNy4zNzggMS4xMjdjLS42MDYuMDkzLS44NDguODMtLjQyMyAxLjI2NWw1LjM2IDUuNDk0LTEuMjY3IDcuNzY3Yy0uMTAxLjYxNy41NTggMS4wOCAxLjEwMy43NzdsNi41OS0zLjY0MiA2LjU5IDMuNjQzYy41NC4zIDEuMjA1LS4xNTQgMS4xMDMtLjc3N2wtMS4yNjctNy43NjcgNS4zNi01LjQ5NGMuNDI1LS40MzYuMTgyLTEuMTczLS40MjMtMS4yNjZ6IiBmaWxsPSIjZmZjMTA3IiBkYXRhLW9yaWdpbmFsPSIjRkZDMTA3IiBjbGFzcz0iYWN0aXZlLXBhdGgiPjwvcGF0aD48L2c+IDwvc3ZnPg==);
+    }
+}
+
+.terra-best-players__player-rating-value{
+    position: relative;
+    z-index: 3;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: $font-heading;
+    color: $color-grid-2;
+    top: 2px;
+}
+
+.terra-best-players__player-name{
+    text-align: center;
+    color: $color-1;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: $font-heading;
+    display: block;
+    padding: 20px 0 10px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include tablet-p{
+        font-size: 16px;
+    }
+}
+
+.terra-best-players__player-league{
+    text-align: center;
+    color: $color-1;
+    font-size: 14px;
+    font-family: $font-heading;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.terra-best-players{
+    .slick-dots{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button{
+            background-color: $color-1;
+            border: none;
+            border-radius: 50%;
+            font-size: 0;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            padding: 0;
+        }
+
+        li.slick-active button{
+            background-color: $color-grid-1;
+        }
+    }
+}

@@ -115,7 +115,6 @@
 
 .slider-item{
     position: relative;
-    min-height: 450px;
         &:before{
             content: '';
             background: rgba(0,0,0,.5);
@@ -127,15 +126,10 @@
             z-index: 1;
         }
         img{
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            right: 0;
             width: 100%;
-            min-height: 450px;
             @include tablet-p{
-                width: auto;
+                width: 100%;
+                position: static;
                 min-height: auto;
             }
         }
