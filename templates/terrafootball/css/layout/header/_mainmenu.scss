@@ -66,6 +66,12 @@ nav.mainmenu{
                         }
                     }
                 }
+                &.item-1573 a{
+                    margin-right: 10px;
+                        @include tablet-p{
+                            margin-right: -10px;
+                        }
+                }
                 &.deeper.parent{
                     @include tablet-p{
                         &.active{
@@ -133,6 +139,13 @@ nav.mainmenu{
                         }
                         .terra{
                             background: $color-6;
+                            @include tablet-p{
+                                margin: 0 -10px;
+                                padding: 15px 10px;
+                            }
+                        }
+                        &.sparring{
+                            background: $color-grid-2;
                             @include tablet-p{
                                 margin: 0 -10px;
                                 padding: 15px 10px;

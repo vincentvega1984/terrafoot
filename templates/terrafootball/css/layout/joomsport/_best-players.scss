@@ -12,6 +12,9 @@
 
 .terra-best-players{
     margin: 0 -15px;
+    @include tablet-p{
+        margin: 0;
+    }
 }
 
 .terra-best-players__title{

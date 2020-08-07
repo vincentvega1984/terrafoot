@@ -571,6 +571,11 @@ nav.mainmenu {
           nav.mainmenu ul.nav.menu > li:first-child .girls,
           nav.mainmenu ul.nav.menu > li:first-child .terra {
             margin-right: -10px; } }
+      nav.mainmenu ul.nav.menu > li.item-1573 a {
+        margin-right: 10px; }
+        @media only screen and (max-width: 768px) {
+          nav.mainmenu ul.nav.menu > li.item-1573 a {
+            margin-right: -10px; } }
       @media only screen and (max-width: 768px) {
         nav.mainmenu ul.nav.menu > li.deeper.parent.active > a:after, nav.mainmenu ul.nav.menu > li.deeper.parent.active > span:after {
           content: '\f146'; } }
@@ -629,6 +634,12 @@ nav.mainmenu {
           background: #0482FA; }
           @media only screen and (max-width: 768px) {
             nav.mainmenu ul.nav.menu > li > a .terra, nav.mainmenu ul.nav.menu > li > span .terra {
+              margin: 0 -10px;
+              padding: 15px 10px; } }
+        nav.mainmenu ul.nav.menu > li > a.sparring, nav.mainmenu ul.nav.menu > li > span.sparring {
+          background: #574A99; }
+          @media only screen and (max-width: 768px) {
+            nav.mainmenu ul.nav.menu > li > a.sparring, nav.mainmenu ul.nav.menu > li > span.sparring {
               margin: 0 -10px;
               padding: 15px 10px; } }
       nav.mainmenu ul.nav.menu > li #dropdown {
@@ -4340,6 +4351,9 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
 
 .terra-best-players {
   margin: 0 -15px; }
+  @media only screen and (max-width: 768px) {
+    .terra-best-players {
+      margin: 0; } }
 
 .terra-best-players__title {
   text-align: center;
