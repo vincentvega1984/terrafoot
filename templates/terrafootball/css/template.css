@@ -2733,7 +2733,7 @@ table.calendar-table {
         padding: 0 40px 30px; } }
 
 .pitch {
-  background: #447710;
+  background-color: #447710;
   width: 600px;
   margin: 0 auto;
   padding: 20px;
@@ -2742,6 +2742,13 @@ table.calendar-table {
     .pitch {
       width: 100%;
       padding: 10px; } }
+  .pitch.sand {
+    background-color: transparent;
+    background-image: url(../img/sand.png);
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .pitch.sand .pitch-wrapper .player a span {
+      color: #282725; }
   .pitch .pitch-wrapper {
     border: 3px solid #ffffff;
     width: 100%;
@@ -4942,5 +4949,119 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
 
   #k2Container.itemView .itemBody .standings-table table.table tr td a {
     font-size: 12px; } }
+.item-page {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #555555;
+  font-size: 15px;
+  line-height: 21px; }
+  .item-page a {
+    color: #0482FA; }
+  .item-page .page-header {
+    border-bottom: 1px solid #3269b2;
+    padding: 10px 0;
+    margin-bottom: 15px; }
+  .item-page .page-header h2 {
+    padding: 0;
+    font-family: "Gilroy";
+    font-size: 24px;
+    line-height: 36px;
+    color: #3269b2;
+    font-weight: 700; }
+  .item-page .terra-clubs__header {
+    margin: 15px 0;
+    font-size: 24px;
+    line-height: 48px; }
+  .item-page table.table {
+    width: 100%;
+    position: relative;
+    margin: 0 0 20px; }
+    .item-page table.table .stick {
+      position: absolute; }
+    .item-page table.table th {
+      background: #3269b2;
+      color: #ffffff;
+      text-align: center;
+      font-size: 16px;
+      font-family: "Gilroy";
+      padding: 10px;
+      border-top: 1px solid #ffffff;
+      min-width: 80px; }
+      @media only screen and (max-width: 480px) {
+        .item-page table.table th {
+          font-size: 14px;
+          vertical-align: middle; } }
+      .item-page table.table th:not(:last-child) {
+        border-right: 1px solid #ffffff; }
+    .item-page table.table tr td {
+      border: 1px solid #dddddd;
+      padding: 10px;
+      vertical-align: middle; }
+      @media only screen and (max-width: 480px) {
+        .item-page table.table tr td {
+          padding: 8px 5px;
+          font-size: 14px; } }
+      .item-page table.table tr td p, .item-page table.table tr td h3 {
+        margin: 0; }
+      .item-page table.table tr td a {
+        text-decoration: none; }
+  .item-page h3 {
+    font-family: "Gilroy";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 15px; }
+  .item-page p {
+    font-size: 15px;
+    line-height: 21px;
+    margin: 0 0 15px;
+    font-weight: 400; }
+  .item-page ol {
+    list-style: decimal;
+    margin: 0 0 15px; }
+    .item-page ol li {
+      margin: 0 0 5px 15px; }
+  .item-page ul {
+    margin: 0 0 15px; }
+    .item-page ul > li {
+      list-style: none;
+      margin-left: 0; }
+      .item-page ul > li:before {
+        content: '\f105';
+        font-size: 16px;
+        font-family: "FontAwesome";
+        margin-right: 7px;
+        top: 0;
+        position: relative;
+        left: 0;
+        color: #0482FA; }
+  .item-page .standings-table {
+    margin-top: 0; }
+    .item-page .standings-table span.jsform_none {
+      display: inline-block;
+      width: 17px;
+      height: 17px;
+      color: white;
+      margin: 0px 3px;
+      font-size: 10px;
+      font-weight: bold;
+      border-radius: 2px;
+      text-align: center;
+      line-height: 17px; }
+    .item-page .standings-table span.match_win {
+      background-color: #01a252; }
+    .item-page .standings-table span.match_draw {
+      background-color: #FBDE2D; }
+    .item-page .standings-table span.match_loose {
+      background-color: #E83737; }
+    .item-page .standings-table table td a {
+      color: #0482FA; }
+  @media only screen and (max-width: 480px) {
+    .item-page .standings-table table.table th,
+    .item-page .standings-table table.table tr td {
+      font-size: 12px;
+      min-width: auto; }
+    .item-page .standings-table table.table tr td a {
+      font-size: 12px; } }
 
 /*# sourceMappingURL=template.css.map */

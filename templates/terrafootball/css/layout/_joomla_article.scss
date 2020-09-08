@@ -1,0 +1,154 @@
+.item-page{
+    font-family: $font;
+    color: $color-5;
+    font-size: 15px;
+    line-height: 21px;
+
+    a{
+        color: $color-6;
+    }
+
+    .page-header{
+        border-bottom: 1px solid $color-3;
+        padding: 10px 0;
+        margin-bottom: 15px;
+    }
+
+    .page-header h2{
+        padding: 0;
+        font-family: $font-heading;
+        font-size: 24px;
+        line-height: 36px;
+        color: $color-3;
+        font-weight: 700;
+    }
+
+    .terra-clubs__header{
+        margin: 15px 0;
+        font-size: 24px;
+        line-height: 48px;
+    }
+
+    table.table{
+        width: 100%;
+        position: relative;
+        margin: 0 0 20px;
+           .stick{
+               position: absolute;
+           }
+           th{
+               background: $color-3;
+               color: $color-1;
+               text-align: center;
+               font-size: 16px;
+               font-family: $font-heading;
+               padding: 10px;
+               border-top: 1px solid $color-1;
+               min-width: 80px;
+               @include mobile-l{
+                   font-size: 14px;
+                   vertical-align: middle;
+               }
+
+               
+               &:not(:last-child){
+                   border-right: 1px solid $color-1;
+               }
+           }
+            tr{
+                td{
+                   border: 1px solid $color-8;
+                   padding: 10px;
+                   vertical-align: middle;
+                   @include mobile-l{
+                       padding: 8px 5px;
+                       font-size: 14px;
+                   }
+                    p,h3{
+                        margin: 0;
+                    }
+                    a{
+                        text-decoration: none;
+                    }
+                }
+            }
+    }
+
+    h3{
+        font-family: $font-heading;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+        text-align: center;
+        margin:0 0 15px;
+    }
+    p{
+        font-size: 15px;
+        line-height: 21px;
+        margin: 0 0 15px;
+        font-weight: 400;
+    }
+    ol{
+        list-style: decimal;
+        margin:0 0 15px;
+        li{
+            margin:0 0 5px 15px;
+        }
+    }
+    ul{
+        margin:0 0 15px;
+        & > li{
+        list-style: none;
+        margin-left:0;
+          &:before{
+            content: '\f105';
+            font-size: 16px;
+            font-family: $icon-font;
+            margin-right: 7px;
+            top: 0;
+            position: relative;
+            left: 0;
+            color:$color-6;
+          }
+        }
+    }
+
+    .standings-table{
+        margin-top: 0;
+        span.jsform_none {
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            color: white;
+            margin: 0px 3px;
+            font-size: 10px;
+            font-weight: bold;
+            border-radius: 2px;
+            text-align: center;
+            line-height: 17px;
+        }
+        span.match_win{
+            background-color: #01a252;
+        }
+        span.match_draw{
+            background-color: #FBDE2D;
+          }
+        span.match_loose {
+            background-color: #E83737;
+        }
+        table td a{
+            color: $color-6;
+        }
+    }
+    
+    @include mobile-l{
+        .standings-table table.table th,
+        .standings-table  table.table tr td{
+            font-size: 12px;
+            min-width: auto;
+        }
+        .standings-table  table.table tr td a{
+            font-size: 12px;
+        }
+    };
+}

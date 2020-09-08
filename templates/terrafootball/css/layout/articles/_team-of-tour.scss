@@ -1,5 +1,5 @@
 .pitch{
-    background: #447710;
+    background-color: #447710;
     width: 600px;
     margin: 0 auto;
     padding: 20px;
@@ -7,6 +7,15 @@
         @include tablet-l{
             width: 100%;
             padding: 10px;
+        }
+        &.sand{
+            background-color: transparent;
+            background-image: url(../img/sand.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            .pitch-wrapper .player a span{
+                color: $color-grid-8;
+            }
         }
         .pitch-wrapper{
             border: 3px solid $color-1;
