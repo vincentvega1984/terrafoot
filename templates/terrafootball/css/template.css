@@ -4211,7 +4211,7 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
     color: #ffffff; }
   .joomsport-matchday-view__match[attr-played="finished"] .joomsport-matchday-view__match-teams {
     position: relative; }
-  .joomsport-matchday-view__match[attr-played="finished"] .joomsport-matchday-view__match-teams:before {
+  .joomsport-matchday-view__match[attr-played="finished"] .joomsport-matchday-view__match-teams:before, .joomsport-matchday-view__match[attr-played="online"] .joomsport-matchday-view__match-teams:before {
     content: ":";
     position: absolute;
     top: 50%;
@@ -4221,7 +4221,7 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
     font-weight: 700;
     font-family: "Gilroy"; }
     @media only screen and (max-width: 768px) {
-      .joomsport-matchday-view__match[attr-played="finished"] .joomsport-matchday-view__match-teams:before {
+      .joomsport-matchday-view__match[attr-played="finished"] .joomsport-matchday-view__match-teams:before, .joomsport-matchday-view__match[attr-played="online"] .joomsport-matchday-view__match-teams:before {
         font-size: 20px; } }
   .joomsport-matchday-view__match[attr-played="finished"]:before {
     content: 'Сыграно';
@@ -4237,6 +4237,18 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
     border-radius: 4px; }
   .joomsport-matchday-view__match[attr-played="await"]:before {
     content: 'Предстоит';
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    font-size: 12px;
+    font-family: "Gilroy";
+    padding: 0 5px;
+    background-color: #574A99;
+    color: #ffffff;
+    border-radius: 4px; }
+  .joomsport-matchday-view__match[attr-played="online"]:before {
+    content: 'Online';
     position: absolute;
     right: 10px;
     top: 10px;

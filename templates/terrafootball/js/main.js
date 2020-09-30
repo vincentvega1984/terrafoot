@@ -480,7 +480,14 @@ $(document).ready(function(){
   var tbl = jQuery('#stab_players #jstable_plz');
   $.moveColumn(tbl, 7, 0);
 
-
+  // Online status
+  var online = $(".joomsport-matchday-view__item .joomsport-matchday-view__team-scores").next(".joomsport-matchday-view__team-scores");
+  online.hide();
+  if (online.length > 0) {
+    console.log('works');
+    online.closest(".joomsport-matchday-view__match").attr("attr-played","online");
+  }
+  console.log('Online---', online.length);
 
   // Smooth scroll to anchor
   $('.itemView aside a').click(function(e){

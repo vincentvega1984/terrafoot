@@ -38,20 +38,31 @@
                                     }
                                     ?>
                                 </div>
+
                                 <div class="joomsport-matchday-view__team-name">
                                     <?php
                                     echo jsHelper::nameHTML($partic_home->getName(true, $cItemId));
                                     ?>
                                 </div>
-                                <?php
-                                if($match->object->m_played > 1 || $match->object->m_played == 0){
-                                ?>
+
+                                <?php if($match->object->m_played == 3){ ?>
+
                                 <div class="joomsport-matchday-view__team-scores">
-                                    <?php echo jsHelper::getScore($match,'','',$cItemId); ?>
-                                </div>
-                                <?php
-                                }else{
+                                    <?php 
+                                        echo '<div class="scoreScrMod">'.classJsportLink::match($match->object->score1, $match->object->id,false,'',$cItemId).'</div>';
                                     ?>
+                                </div>
+
+                                <?php } ?>
+
+                                <?php if($match->object->m_played > 1 || $match->object->m_played == 0){ ?>
+
+                                    <div class="joomsport-matchday-view__team-scores">
+                                        <?php echo jsHelper::getScore($match,'','',$cItemId); ?>
+                                    </div>
+
+                                <?php }else{ ?>
+
                                 <div class="joomsport-matchday-view__team-scores">
                                     <?php
                                     if($match->object->m_played){    
@@ -91,6 +102,13 @@
                                 <?php
                                 }
                                 ?>
+                                <?php if($match->object->m_played == 3){ ?>
+                                    <div class="joomsport-matchday-view__team-scores">
+                                        <?php 
+                                            echo '<div class="scoreScrMod">'.classJsportLink::match($match->object->score2, $match->object->id,false,'',$cItemId).'</div>';
+                                        ?>
+                                    </div>
+                                <?php } ?>
                             </div>
                         </div>
 
