@@ -484,10 +484,8 @@ $(document).ready(function(){
   var online = $(".joomsport-matchday-view__item .joomsport-matchday-view__team-scores").next(".joomsport-matchday-view__team-scores");
   online.hide();
   if (online.length > 0) {
-    console.log('works');
     online.closest(".joomsport-matchday-view__match").attr("attr-played","online");
   }
-  console.log('Online---', online.length);
 
   // Smooth scroll to anchor
   $('.itemView aside a').click(function(e){
@@ -540,6 +538,19 @@ $("#rating-sortable").tablesorter();
 
 /**Init table sorter for naibourghoods */
 $("#rating-sortable-international").tablesorter();
+
+/**Change Новавтотранс to НАТ */
+/*$('.scores-items .item .item-wrapper .match-wrap .team .team-name a').each(function() {
+  var text = $(this).text();
+  $(this).text(text.replace('НовАвтоТранс', 'НАТ')); 
+});*/
+
+/**Add fixed column to rating tables */
+var rowCount = $('#rating-sortable tbody tr').length;
+console.log('ROWS ---', rowCount);
+for (var i = 1; i < rowCount+1; i++) { 
+  $(".rating-table-wrapper .fixed-column").append('<div>' + [i] + '</div>'); 
+} 
 
 });
 })(jQuery);

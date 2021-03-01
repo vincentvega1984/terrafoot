@@ -1820,6 +1820,43 @@ This file describes styles for special terrafootball elements
         position: relative;
         left: 0;
         color: #0482FA; }
+  #k2Container.itemView .itemBody .rating-table-wrapper {
+    position: relative;
+    padding: 0 0 0 40px; }
+    #k2Container.itemView .itemBody .rating-table-wrapper .fixed-column {
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-bottom: 1px solid #dddddd; }
+      #k2Container.itemView .itemBody .rating-table-wrapper .fixed-column:before {
+        content: "#";
+        background: #3269b2;
+        color: #ffffff;
+        border-right: 1px solid #ffffff;
+        font-size: 16px;
+        font-family: "Gilroy";
+        border-top: 1px solid #ffffff;
+        width: 40px;
+        height: 126px;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center; }
+      #k2Container.itemView .itemBody .rating-table-wrapper .fixed-column > div {
+        border: 1px solid #dddddd;
+        padding: 10px;
+        font-size: 15px;
+        line-height: 30px;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        border-right: 0;
+        border-bottom: 0; }
+        @media only screen and (max-width: 480px) {
+          #k2Container.itemView .itemBody .rating-table-wrapper .fixed-column > div {
+            padding: 8px 5px;
+            font-size: 14px; } }
   #k2Container.itemView .itemBody table.table {
     width: 100%;
     position: relative;
@@ -1843,8 +1880,9 @@ This file describes styles for special terrafootball elements
         border-right: 1px solid #ffffff; }
     #k2Container.itemView .itemBody table.table tr td {
       border: 1px solid #dddddd;
-      padding: 10px;
-      vertical-align: middle; }
+      padding: 10px 8px;
+      vertical-align: middle;
+      font-size: 15px; }
       @media only screen and (max-width: 480px) {
         #k2Container.itemView .itemBody table.table tr td {
           padding: 8px 5px;
@@ -1852,7 +1890,8 @@ This file describes styles for special terrafootball elements
       #k2Container.itemView .itemBody table.table tr td p, #k2Container.itemView .itemBody table.table tr td h3 {
         margin: 0; }
       #k2Container.itemView .itemBody table.table tr td a {
-        text-decoration: none; }
+        text-decoration: none;
+        white-space: nowrap; }
   #k2Container.itemView .itemBody .itemImageBlock {
     float: left;
     width: 400px;
@@ -4734,7 +4773,7 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
         .footer .footer-top .moduletable ul li a:hover {
           text-decoration: underline; }
   .footer .footer-middle {
-    background: #359bfc;
+    background: #ffffff;
     padding: 15px 0; }
     .footer .footer-middle .terra-social {
       display: flex;
@@ -4742,7 +4781,7 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
       align-items: center; }
       .footer .footer-middle .terra-social span {
         font-family: "Gilroy";
-        color: #ffffff;
+        color: #3269b2;
         font-size: 24px; }
         @media only screen and (max-width: 480px) {
           .footer .footer-middle .terra-social span {
@@ -4774,6 +4813,8 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
               background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTEyLjE5NiAxMTIuMTk2IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxMTIuMTk2IDExMi4xOTY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+PGc+PGc+Cgk8Zz4KCQk8Y2lyY2xlIGlkPSJYTUxJRF8xMV8iIHN0eWxlPSJmaWxsOiM0RDc2QTE7IiBjeD0iNTYuMDk4IiBjeT0iNTYuMDk4IiByPSI1Ni4wOTgiIGRhdGEtb3JpZ2luYWw9IiM0RDc2QTEiIGNsYXNzPSJhY3RpdmUtcGF0aCI+PC9jaXJjbGU+Cgk8L2c+Cgk8cGF0aCBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7ZmlsbDojRkZGRkZGOyIgZD0iTTUzLjk3OSw4MC43MDJoNC40MDNjMCwwLDEuMzMtMC4xNDYsMi4wMDktMC44NzggICBjMC42MjUtMC42NzIsMC42MDUtMS45MzQsMC42MDUtMS45MzRzLTAuMDg2LTUuOTA4LDIuNjU2LTYuNzc4YzIuNzAzLTAuODU3LDYuMTc0LDUuNzEsOS44NTMsOC4yMzUgICBjMi43ODIsMS45MTEsNC44OTYsMS40OTIsNC44OTYsMS40OTJsOS44MzctMC4xMzdjMCwwLDUuMTQ2LTAuMzE3LDIuNzA2LTQuMzYzYy0wLjItMC4zMzEtMS40MjEtMi45OTMtNy4zMTQtOC40NjMgICBjLTYuMTY4LTUuNzI1LTUuMzQyLTQuNzk5LDIuMDg4LTE0LjcwMmM0LjUyNS02LjAzMSw2LjMzNC05LjcxMyw1Ljc2OS0xMS4yOWMtMC41MzktMS41MDItMy44NjctMS4xMDUtMy44NjctMS4xMDVsLTExLjA3NiwwLjA2OSAgIGMwLDAtMC44MjEtMC4xMTItMS40MywwLjI1MmMtMC41OTUsMC4zNTctMC45NzgsMS4xODktMC45NzgsMS4xODlzLTEuNzUzLDQuNjY3LTQuMDkxLDguNjM2Yy00LjkzMiw4LjM3NS02LjkwNCw4LjgxNy03LjcxLDguMjk3ICAgYy0xLjg3NS0xLjIxMi0xLjQwNy00Ljg2OS0xLjQwNy03LjQ2N2MwLTguMTE2LDEuMjMxLTExLjUtMi4zOTctMTIuMzc2Yy0xLjIwNC0wLjI5MS0yLjA5LTAuNDgzLTUuMTY5LTAuNTE0ICAgYy0zLjk1Mi0wLjA0MS03LjI5NywwLjAxMi05LjE5MSwwLjk0Yy0xLjI2LDAuNjE3LTIuMjMyLDEuOTkyLTEuNjQsMi4wNzFjMC43MzIsMC4wOTgsMi4zOSwwLjQ0NywzLjI2OSwxLjY0NCAgIGMxLjEzNSwxLjU0NCwxLjA5NSw1LjAxMiwxLjA5NSw1LjAxMnMwLjY1Miw5LjU1NC0xLjUyMywxMC43NDFjLTEuNDkzLDAuODE0LTMuNTQxLTAuODQ4LTcuOTM4LTguNDQ2ICAgYy0yLjI1My0zLjg5Mi0zLjk1NC04LjE5NC0zLjk1NC04LjE5NHMtMC4zMjgtMC44MDQtMC45MTMtMS4yMzRjLTAuNzEtMC41MjEtMS43MDItMC42ODctMS43MDItMC42ODdsLTEwLjUyNSwwLjA2OSAgIGMwLDAtMS41OCwwLjA0NC0yLjE2LDAuNzMxYy0wLjUxNiwwLjYxMS0wLjA0MSwxLjg3NS0wLjA0MSwxLjg3NXM4LjI0LDE5LjI3OCwxNy41NywyOC45OTMgICBDNDQuMjY0LDgxLjI4Nyw1My45NzksODAuNzAyLDUzLjk3OSw4MC43MDJMNTMuOTc5LDgwLjcwMnoiPjwvcGF0aD4KPC9nPjwvZz4gPC9zdmc+); }
             .footer .footer-middle .terra-social ul li a.tw {
               background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTEyLjE5NyAxMTIuMTk3IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxMTIuMTk3IDExMi4xOTc7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+PGc+PGc+Cgk8Y2lyY2xlIHN0eWxlPSJmaWxsOiM1NUFDRUU7IiBjeD0iNTYuMDk5IiBjeT0iNTYuMDk4IiByPSI1Ni4wOTgiIGRhdGEtb3JpZ2luYWw9IiM1NUFDRUUiPjwvY2lyY2xlPgoJPGc+CgkJPHBhdGggc3R5bGU9ImZpbGw6I0YxRjJGMjsiIGQ9Ik05MC40NjEsNDAuMzE2Yy0yLjQwNCwxLjA2Ni00Ljk5LDEuNzg3LTcuNzAyLDIuMTA5YzIuNzY5LTEuNjU5LDQuODk0LTQuMjg0LDUuODk3LTcuNDE3ICAgIGMtMi41OTEsMS41MzctNS40NjIsMi42NTItOC41MTUsMy4yNTNjLTIuNDQ2LTIuNjA1LTUuOTMxLTQuMjMzLTkuNzktNC4yMzNjLTcuNDA0LDAtMTMuNDA5LDYuMDA1LTEzLjQwOSwxMy40MDkgICAgYzAsMS4wNTEsMC4xMTksMi4wNzQsMC4zNDksMy4wNTZjLTExLjE0NC0wLjU1OS0yMS4wMjUtNS44OTctMjcuNjM5LTE0LjAxMmMtMS4xNTQsMS45OC0xLjgxNiw0LjI4NS0xLjgxNiw2Ljc0MiAgICBjMCw0LjY1MSwyLjM2OSw4Ljc1Nyw1Ljk2NSwxMS4xNjFjLTIuMTk3LTAuMDY5LTQuMjY2LTAuNjcyLTYuMDczLTEuNjc5Yy0wLjAwMSwwLjA1Ny0wLjAwMSwwLjExNC0wLjAwMSwwLjE3ICAgIGMwLDYuNDk3LDQuNjI0LDExLjkxNiwxMC43NTcsMTMuMTQ3Yy0xLjEyNCwwLjMwOC0yLjMxMSwwLjQ3MS0zLjUzMiwwLjQ3MWMtMC44NjYsMC0xLjcwNS0wLjA4My0yLjUyMy0wLjIzOSAgICBjMS43MDYsNS4zMjYsNi42NTcsOS4yMDMsMTIuNTI2LDkuMzEyYy00LjU5LDMuNTk3LTEwLjM3MSw1Ljc0LTE2LjY1NSw1Ljc0Yy0xLjA4LDAtMi4xNS0wLjA2My0zLjE5Ny0wLjE4OCAgICBjNS45MzEsMy44MDYsMTIuOTgxLDYuMDI1LDIwLjU1Myw2LjAyNWMyNC42NjQsMCwzOC4xNTItMjAuNDMyLDM4LjE1Mi0zOC4xNTNjMC0wLjU4MS0wLjAxMy0xLjE2LTAuMDM5LTEuNzM0ICAgIEM4Ni4zOTEsNDUuMzY2LDg4LjY2NCw0My4wMDUsOTAuNDYxLDQwLjMxNkw5MC40NjEsNDAuMzE2eiIgZGF0YS1vcmlnaW5hbD0iI0YxRjJGMiIgY2xhc3M9ImFjdGl2ZS1wYXRoIj48L3BhdGg+Cgk8L2c+CjwvZz48L2c+IDwvc3ZnPg==); }
+            .footer .footer-middle .terra-social ul li a.tg {
+              background-image: url(data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNCAyNCIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiBmaWxsPSIjMDM5YmU1IiByPSIxMiIvPjxwYXRoIGQ9Im01LjQ5MSAxMS43NCAxMS41Ny00LjQ2MWMuNTM3LS4xOTQgMS4wMDYuMTMxLjgzMi45NDNsLjAwMS0uMDAxLTEuOTcgOS4yODFjLS4xNDYuNjU4LS41MzcuODE4LTEuMDg0LjUwOGwtMy0yLjIxMS0xLjQ0NyAxLjM5NGMtLjE2LjE2LS4yOTUuMjk1LS42MDUuMjk1bC4yMTMtMy4wNTMgNS41Ni01LjAyM2MuMjQyLS4yMTMtLjA1NC0uMzMzLS4zNzMtLjEyMWwtNi44NzEgNC4zMjYtMi45NjItLjkyNGMtLjY0My0uMjA0LS42NTctLjY0My4xMzYtLjk1M3oiIGZpbGw9IiNmZmYiLz48L3N2Zz4=); }
   .footer .footer-bottom {
     padding: 20px 0;
     color: #ffffff;
