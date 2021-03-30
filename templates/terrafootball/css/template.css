@@ -601,7 +601,7 @@ nav.mainmenu {
         display: block;
         padding: 6px 8px;
         border-radius: 3px;
-        font-size: 15px;
+        font-size: 14px;
         -webkit-transition: all 0.3s ease-out;
         -moz-transition: all 0.3s ease-out;
         -ms-transition: all 0.3s ease-out;
@@ -618,28 +618,90 @@ nav.mainmenu {
             nav.mainmenu ul.nav.menu > li > a:hover, nav.mainmenu ul.nav.menu > li > span:hover {
               color: #ffffff;
               background: none; } }
-        nav.mainmenu ul.nav.menu > li > a.kids, nav.mainmenu ul.nav.menu > li > span.kids {
+        nav.mainmenu ul.nav.menu > li > a.menu-green, nav.mainmenu ul.nav.menu > li > span.menu-green {
           background: #64C0B9; }
           @media only screen and (max-width: 768px) {
-            nav.mainmenu ul.nav.menu > li > a.kids, nav.mainmenu ul.nav.menu > li > span.kids {
+            nav.mainmenu ul.nav.menu > li > a.menu-green, nav.mainmenu ul.nav.menu > li > span.menu-green {
               margin: 0 -10px;
               padding: 15px 10px; } }
-        nav.mainmenu ul.nav.menu > li > a.girls, nav.mainmenu ul.nav.menu > li > span.girls {
+        nav.mainmenu ul.nav.menu > li > a.menu-dark-green, nav.mainmenu ul.nav.menu > li > span.menu-dark-green {
+          background: #00897b; }
+          @media only screen and (max-width: 768px) {
+            nav.mainmenu ul.nav.menu > li > a.menu-dark-green, nav.mainmenu ul.nav.menu > li > span.menu-dark-green {
+              margin: 0 -10px;
+              padding: 15px 10px; } }
+        nav.mainmenu ul.nav.menu > li > a.menu-red, nav.mainmenu ul.nav.menu > li > span.menu-red {
           background: #E94C39; }
           @media only screen and (max-width: 768px) {
-            nav.mainmenu ul.nav.menu > li > a.girls, nav.mainmenu ul.nav.menu > li > span.girls {
+            nav.mainmenu ul.nav.menu > li > a.menu-red, nav.mainmenu ul.nav.menu > li > span.menu-red {
               margin: 0 -10px;
               padding: 15px 10px; } }
+        nav.mainmenu ul.nav.menu > li > a.menu-violet, nav.mainmenu ul.nav.menu > li > span.menu-violet {
+          background: #574A99; }
+          @media only screen and (max-width: 768px) {
+            nav.mainmenu ul.nav.menu > li > a.menu-violet, nav.mainmenu ul.nav.menu > li > span.menu-violet {
+              margin: 0 -10px;
+              padding: 15px 10px; } }
+        nav.mainmenu ul.nav.menu > li > a.menu-dark-violet, nav.mainmenu ul.nav.menu > li > span.menu-dark-violet {
+          background: #3E3C90; }
+          @media only screen and (max-width: 768px) {
+            nav.mainmenu ul.nav.menu > li > a.menu-dark-violet, nav.mainmenu ul.nav.menu > li > span.menu-dark-violet {
+              margin: 0 -10px;
+              padding: 15px 10px; } }
+        nav.mainmenu ul.nav.menu > li > a.cup, nav.mainmenu ul.nav.menu > li > span.cup {
+          padding-left: 24px;
+          position: relative; }
+          @media only screen and (max-width: 768px) {
+            nav.mainmenu ul.nav.menu > li > a.cup, nav.mainmenu ul.nav.menu > li > span.cup {
+              padding-left: 32px; } }
+          nav.mainmenu ul.nav.menu > li > a.cup:before, nav.mainmenu ul.nav.menu > li > span.cup:before {
+            content: '';
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNTEyIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MTIuMDAwMDEgNTEyIiB3aWR0aD0iNTEyIiBjbGFzcz0iIj48Zz48ZyBpZD0ic3VyZmFjZTEiPgo8cGF0aCBkPSJNIDQ5NyAzNi45NTMxMjUgTCA0MzEuMjk2ODc1IDM2Ljk1MzEyNSBDIDQzMS41MzUxNTYgMjkuNjc1NzgxIDQzMS42Njc5NjkgMjIuMzU1NDY5IDQzMS42Njc5NjkgMTUgQyA0MzEuNjY3OTY5IDYuNzE0ODQ0IDQyNC45NDkyMTkgMCA0MTYuNjY3OTY5IDAgTCA5NS4zMzU5MzggMCBDIDg3LjA1MDc4MSAwIDgwLjMzNTkzOCA2LjcxNDg0NCA4MC4zMzU5MzggMTUgQyA4MC4zMzU5MzggMjIuMzU1NDY5IDgwLjQ2NDg0NCAyOS42NzU3ODEgODAuNzAzMTI1IDM2Ljk1MzEyNSBMIDE1IDM2Ljk1MzEyNSBDIDYuNzE0ODQ0IDM2Ljk1MzEyNSAwIDQzLjY2Nzk2OSAwIDUxLjk1MzEyNSBDIDAgMTE5LjE2NDA2MiAxNy41NjY0MDYgMTgyLjU3NDIxOSA0OS40NjA5MzggMjMwLjUwNzgxMiBDIDgwLjk4ODI4MSAyNzcuODk0NTMxIDEyMi45ODQzNzUgMzA1LjA3NDIxOSAxNjguMzQ3NjU2IDMwNy43MTg3NSBDIDE3OC42MzI4MTIgMzE4LjkxMDE1NiAxODkuNTA3ODEyIDMyOC4wMzUxNTYgMjAwLjgzMjAzMSAzMzQuOTk2MDk0IEwgMjAwLjgzMjAzMSA0MDEuNjY0MDYyIEwgMTc1LjY2Nzk2OSA0MDEuNjY0MDYyIEMgMTQ1LjI0NjA5NCA0MDEuNjY0MDYyIDEyMC41IDQyNi40MTQwNjIgMTIwLjUgNDU2LjgzMjAzMSBMIDEyMC41IDQ4MS45OTYwOTQgTCAxMTkuNDMzNTk0IDQ4MS45OTYwOTQgQyAxMTEuMTQ4NDM4IDQ4MS45OTYwOTQgMTA0LjQzMzU5NCA0ODguNzE0ODQ0IDEwNC40MzM1OTQgNDk2Ljk5NjA5NCBDIDEwNC40MzM1OTQgNTA1LjI4MTI1IDExMS4xNDg0MzggNTExLjk5NjA5NCAxMTkuNDMzNTk0IDUxMS45OTYwOTQgTCAzOTIuNTY2NDA2IDUxMS45OTYwOTQgQyA0MDAuODUxNTYyIDUxMS45OTYwOTQgNDA3LjU2NjQwNiA1MDUuMjgxMjUgNDA3LjU2NjQwNiA0OTYuOTk2MDk0IEMgNDA3LjU2NjQwNiA0ODguNzE0ODQ0IDQwMC44NTE1NjIgNDgxLjk5NjA5NCAzOTIuNTY2NDA2IDQ4MS45OTYwOTQgTCAzOTEuNSA0ODEuOTk2MDk0IEwgMzkxLjUgNDU2LjgzMjAzMSBDIDM5MS41IDQyNi40MTQwNjIgMzY2Ljc1IDQwMS42NjQwNjIgMzM2LjMzMjAzMSA0MDEuNjY0MDYyIEwgMzExLjE2Nzk2OSA0MDEuNjY0MDYyIEwgMzExLjE2Nzk2OSAzMzQuOTk2MDk0IEMgMzIyLjQ5MjE4OCAzMjguMDM1MTU2IDMzMy4zNjMyODEgMzE4LjkxMDE1NiAzNDMuNjQ4NDM4IDMwNy43MTg3NSBDIDM4OS4wMTU2MjUgMzA1LjA3NDIxOSA0MzEuMDA3ODEyIDI3Ny44OTQ1MzEgNDYyLjUzOTA2MiAyMzAuNTA3ODEyIEMgNDk0LjQzMzU5NCAxODIuNTc0MjE5IDUxMiAxMTkuMTY0MDYyIDUxMiA1MS45NTMxMjUgQyA1MTIgNDMuNjY3OTY5IDUwNS4yODEyNSAzNi45NTMxMjUgNDk3IDM2Ljk1MzEyNSBaIE0gNzQuNDM3NSAyMTMuODkwNjI1IEMgNDguMTI4OTA2IDE3NC4zNTE1NjIgMzIuNjcxODc1IDEyMi42NDQ1MzEgMzAuMzE2NDA2IDY2Ljk1MzEyNSBMIDgyLjM3ODkwNiA2Ni45NTMxMjUgQyA4Ny43ODkwNjIgMTM1LjQxNDA2MiAxMDMuODU5Mzc1IDE5OC42OTE0MDYgMTI4Ljk3NjU2MiAyNDguOTI1NzgxIEMgMTMyLjk3NjU2MiAyNTYuOTI1NzgxIDEzNy4xNjAxNTYgMjY0LjQ4MDQ2OSAxNDEuNSAyNzEuNjAxNTYyIEMgMTE2LjU1MDc4MSAyNjIuMTc5Njg4IDkzLjQ2MDkzOCAyNDIuNDg0Mzc1IDc0LjQzNzUgMjEzLjg5MDYyNSBaIE0gNDM3LjU2MjUgMjEzLjg5MDYyNSBDIDQxOC41MzkwNjIgMjQyLjQ4NDM3NSAzOTUuNDQ5MjE5IDI2Mi4xNzk2ODggMzcwLjUgMjcxLjYwMTU2MiBDIDM3NC44NDM3NSAyNjQuNDgwNDY5IDM3OS4wMjM0MzggMjU2LjkyNTc4MSAzODMuMDIzNDM4IDI0OC45MjU3ODEgQyA0MDguMTQwNjI1IDE5OC42OTE0MDYgNDI0LjIwNzAzMSAxMzUuNDE0MDYyIDQyOS42MjEwOTQgNjYuOTUzMTI1IEwgNDgxLjY4MzU5NCA2Ni45NTMxMjUgQyA0NzkuMzI4MTI1IDEyMi42NDQ1MzEgNDYzLjg3MTA5NCAxNzQuMzUxNTYyIDQzNy41NjI1IDIxMy44OTA2MjUgWiBNIDQzNy41NjI1IDIxMy44OTA2MjUgIiBzdHlsZT0iZmlsbDojRkZGRkZGIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+CjwvZz48L2c+IDwvc3ZnPg==);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 12px;
+            display: block;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            left: 0;
+            top: 2px; }
+            @media only screen and (max-width: 768px) {
+              nav.mainmenu ul.nav.menu > li > a.cup:before, nav.mainmenu ul.nav.menu > li > span.cup:before {
+                background-size: 16px;
+                width: 32px;
+                height: 32px;
+                left: -7px;
+                top: 8px; } }
+        nav.mainmenu ul.nav.menu > li > a.league, nav.mainmenu ul.nav.menu > li > span.league {
+          padding-left: 24px;
+          position: relative; }
+          @media only screen and (max-width: 768px) {
+            nav.mainmenu ul.nav.menu > li > a.league, nav.mainmenu ul.nav.menu > li > span.league {
+              padding-left: 32px; } }
+          nav.mainmenu ul.nav.menu > li > a.league:before, nav.mainmenu ul.nav.menu > li > span.league:before {
+            content: '';
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48Zz48Zz4KCTxnPgoJCTxwYXRoIGQ9Ik00OTIsMjM2SDE0NC4yNjJjLTExLjA0NiwwLTIwLDguOTU0LTIwLDIwczguOTU0LDIwLDIwLDIwSDQ5MmMxMS4wNDYsMCwyMC04Ljk1NCwyMC0yMEM1MTIsMjQ0Ljk1NCw1MDMuMDQ2LDIzNiw0OTIsMjM2eiAgICAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD4KCTwvZz4KPC9nPjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ5Miw4NkgxNDQuMjYyYy0xMS4wNDYsMC0yMCw4Ljk1NC0yMCwyMHM4Ljk1NCwyMCwyMCwyMEg0OTJjMTEuMDQ2LDAsMjAtOC45NTQsMjAtMjBTNTAzLjA0Niw4Niw0OTIsODZ6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+Cgk8L2c+CjwvZz48Zz4KCTxnPgoJCTxwYXRoIGQ9Ik00OTIsMzg2SDE0NC4yNjJjLTExLjA0NiwwLTIwLDguOTU0LTIwLDIwYzAsMTEuMDQ2LDguOTU0LDIwLDIwLDIwSDQ5MmMxMS4wNDYsMCwyMC04Ljk1NCwyMC0yMCAgICBDNTEyLDM5NC45NTQsNTAzLjA0NiwzODYsNDkyLDM4NnoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD4KCTwvZz4KPC9nPjxnPgoJPGc+CgkJPGNpcmNsZSBjeD0iMjciIGN5PSIxMDYiIHI9IjI3IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L2NpcmNsZT4KCTwvZz4KPC9nPjxnPgoJPGc+CgkJPGNpcmNsZSBjeD0iMjciIGN5PSIyNTYiIHI9IjI3IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L2NpcmNsZT4KCTwvZz4KPC9nPjxnPgoJPGc+CgkJPGNpcmNsZSBjeD0iMjciIGN5PSI0MDYiIHI9IjI3IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L2NpcmNsZT4KCTwvZz4KPC9nPjwvZz4gPC9zdmc+);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 12px;
+            display: block;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            left: 0;
+            top: 2px; }
+            @media only screen and (max-width: 768px) {
+              nav.mainmenu ul.nav.menu > li > a.league:before, nav.mainmenu ul.nav.menu > li > span.league:before {
+                background-size: 16px;
+                width: 32px;
+                height: 32px;
+                left: -7px;
+                top: 8px; } }
         nav.mainmenu ul.nav.menu > li > a .terra, nav.mainmenu ul.nav.menu > li > span .terra {
           background: #0482FA; }
           @media only screen and (max-width: 768px) {
             nav.mainmenu ul.nav.menu > li > a .terra, nav.mainmenu ul.nav.menu > li > span .terra {
-              margin: 0 -10px;
-              padding: 15px 10px; } }
-        nav.mainmenu ul.nav.menu > li > a.sparring, nav.mainmenu ul.nav.menu > li > span.sparring {
-          background: #574A99; }
-          @media only screen and (max-width: 768px) {
-            nav.mainmenu ul.nav.menu > li > a.sparring, nav.mainmenu ul.nav.menu > li > span.sparring {
               margin: 0 -10px;
               padding: 15px 10px; } }
       nav.mainmenu ul.nav.menu > li #dropdown {
@@ -4903,6 +4965,14 @@ body.clubs #joomsport-container .table-responsive:not(.global) .jstable {
 .terra-clubs__standings.second-league tbody tr:nth-child(2) td:first-child {
   background-color: #FFFF99; }
 .terra-clubs__standings.second-league tbody tr:nth-child(8) td:first-child {
+  background-color: #CCFFCC; }
+
+/*Colors third league*/
+.terra-clubs__standings.third-league tbody tr:nth-child(3) td:first-child {
+  background-color: #FFFF99; }
+.terra-clubs__standings.third-league tbody tr:nth-child(8) td:first-child,
+.terra-clubs__standings.third-league tbody tr:nth-child(9) td:first-child,
+.terra-clubs__standings.third-league tbody tr:last-child td:first-child {
   background-color: #CCFFCC; }
 
 .terra-clubs.small .terra-clubs__club {

@@ -98,6 +98,17 @@
     }
 }
 
+/*Colors third league*/
+.terra-clubs__standings.third-league{
+    tbody tr:nth-child(3) td:first-child{
+        background-color: #FFFF99;
+    }
+    tbody tr:nth-child(8) td:first-child,
+    tbody tr:nth-child(9) td:first-child,
+    tbody tr:last-child td:first-child{
+        background-color: #CCFFCC;
+    }
+}
 
 .terra-clubs.small .terra-clubs__club{
     width: 25%;
