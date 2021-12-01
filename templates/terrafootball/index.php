@@ -69,14 +69,14 @@ defined('_JEXEC') or die;
         <jdoc:include type="modules" name="slider" style="xhtml" />
         
         <!--For winter slider snow only-->
-        <!-- <div class="winter-is-coming">
+         <div class="winter-is-coming">
             <div class="snow snow--near"></div>
             <div class="snow snow--near snow--alt"></div>
             <div class="snow snow--mid"></div>
             <div class="snow snow--mid snow--alt"></div>
             <div class="snow snow--far"></div>
             <div class="snow snow--far snow--alt"></div>
-        </div> -->
+        </div> 
 
     </div>
 <?php endif; ?>
